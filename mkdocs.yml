@@ -71,3 +71,9 @@ nav:
       - 风格审查提示词: prompts/style-review.md
       - 质量检查提示词: prompts/quality-check.md
       - 最终润色提示词: prompts/final-polish.md
+  - 生产标准:
+      - 工作流卡标准: guide/workflow-card-template.md
+      - Style 工程规范: guide/style-engineering.md
+      - 质量标准: guide/quality-standard.md
+      - Prompt 与 Style 关系: guide/prompt-and-style.md
+      - 第二阶段审查记录: guide/stage-2-review.md
