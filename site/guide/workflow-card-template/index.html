@@ -1421,8 +1421,8 @@
 <hr />
 <h1 id="_2">【工作流名称】<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
 <p><strong>适用岗位</strong>：【岗位名称，可多个】</p>
-<p><strong>真实场景</strong>：【一句话描述触发这个工作流的具体情境。例如：接到领导要求，三天内产出一篇完整的活动宣传报道。】</p>
-<p><strong>最终目标</strong>：【完成后交付什么。例如：一篇 800 字新闻稿 + 一个 60 秒短视频脚本 + 三条发布标题。】</p>
+<p><strong>真实场景</strong>：【一句话描述触发这个工作流的具体情境】</p>
+<p><strong>最终目标</strong>：【完成后交付什么，列出所有交付物】</p>
 <hr />
 <h2 id="_3">输入材料清单<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>开始前请准备以下材料：</p>
@@ -1437,31 +1437,51 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ↓ 输出：【简述输出内容】
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>节点 2：【节点名称】
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  ↓ 输出：【简述输出内容】
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>节点 3：【节点名称】
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  ↓ 输出：【简述输出内容】
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>...
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>最终交付：【交付物名称】
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>...
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>最终交付：【交付物名称】
 </code></pre></div>
 <hr />
 <h2 id="_5">专家节点详解<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>每个节点包含六部分：节点定位、输入与输出、使用顺序、提示词包（A 快速 / B 专家 / C 自查 / D 返修）、交付给下游节点、人工验收清单。</p>
+<p><strong>C 自查审稿版和 D 返修优化版是当前节点内部的工作模式，不是新的专家角色。</strong></p>
 <hr />
 <h3 id="1">节点 1：【节点名称】<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p><strong>职责</strong>：【一句话说明这个节点做什么，不超过 30 字】</p>
+<h4 id="11">1.1 节点定位<a class="headerlink" href="#11" title="Permanent link">&para;</a></h4>
+<p>【说明这个专家节点在整个工作流中的作用，以及为何需要一个专门节点处理这项任务。不超过 3 句话。】</p>
+<h4 id="12">1.2 输入与输出<a class="headerlink" href="#12" title="Permanent link">&para;</a></h4>
 <p><strong>输入</strong>：【接收什么材料，从哪个节点或来源获得】</p>
 <p><strong>输出</strong>：【产出什么，格式是什么】</p>
-<h4 id="_6">基础提示词<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>【可直接复制使用的提示词，不留占位符】
+<h4 id="13">1.3 使用顺序<a class="headerlink" href="#13" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」产出初稿。</li>
+<li>再用「专家增强版」提升质量（可选，适合要求更高的场景）。</li>
+<li>用「自查审稿版」检查当前节点的输出质量。</li>
+<li>如有问题，用「返修优化版」根据自查结果修改。</li>
+<li>人工对照 1.6 验收清单确认，通过后交给下游节点。</li>
+</ol>
+<h4 id="14">1.4 提示词包<a class="headerlink" href="#14" title="Permanent link">&para;</a></h4>
+<h5 id="a">A. 快速生成版<a class="headerlink" href="#a" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>【直接可用的提示词，50-100 字，角色 + 任务 + 输出格式清晰，不留无法识别的占位符】
 </code></pre></div>
-<h4 id="_7">进阶提示词<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>【复杂或专业场景使用的提示词，比基础版更详细】
+<h5 id="b">B. 专家增强版<a class="headerlink" href="#b" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>【高质量版，100-200 字，必须包含：角色设定、具体任务、输入说明、执行步骤或约束、输出格式要求、质量标准】
 </code></pre></div>
-<h4 id="_8">审查提示词<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>【用于检查节点输出质量的提示词，列出具体审查维度】
+<h5 id="c">C. 自查审稿版<a class="headerlink" href="#c" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>【列出 3-5 个具体可判断的审查问题，每条一行，格式：是否存在 X 问题？】
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>【粘贴当前节点的输出内容】
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>逐条说明问题。
 </code></pre></div>
-<h4 id="_9">修正提示词<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>【基于审查结果要求 AI 重写的提示词】
+<h5 id="d">D. 返修优化版<a class="headerlink" href="#d" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>【根据自查结果返修，明确&quot;保留什么、修正什么&quot;，50-100 字】
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>原始输出：【粘贴原始输出】
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>自查意见：【粘贴自查结果】
 </code></pre></div>
-<p><strong>验收标准</strong>：</p>
+<h4 id="15">1.5 交付给下游节点<a class="headerlink" href="#15" title="Permanent link">&para;</a></h4>
+<p>【说明当前节点的输出如何交给下一个节点：交接格式是什么、需要复制哪些内容、是否需要人工补充额外信息。】</p>
+<h4 id="16">1.6 人工验收清单<a class="headerlink" href="#16" title="Permanent link">&para;</a></h4>
 <ul>
 <li>[ ] 【可判断的是/否问题 1】</li>
 <li>[ ] 【可判断的是/否问题 2】</li>
@@ -1470,10 +1490,10 @@
 <hr />
 <h3 id="2">节点 2：【节点名称】<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>按照节点 1 的格式依次填写。</p>
+<p>按照节点 1 的六节格式（2.1 到 2.6）依次填写。</p>
 </blockquote>
 <hr />
-<h2 id="_10">节点交接说明<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_6">节点交接说明<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1496,19 +1516,16 @@
 </tbody>
 </table>
 <hr />
-<h2 id="_11">最终输出模板<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h2 id="_7">最终输出模板<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>【可填写的空白格式，用 【字段名】 标记待填写位置】
 </code></pre></div>
 <hr />
-<h2 id="_12">常见错误<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h2 id="_8">常见错误<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p><strong>错误 1：【错误名称】</strong></p>
 <p>表现：【具体描述】</p>
 <p>修复：【操作指引】</p>
-<p><strong>错误 2：【错误名称】</strong></p>
-<p>表现：【具体描述】</p>
-<p>修复：【操作指引】</p>
 <hr />
-<h2 id="_13">人工验收清单<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h2 id="_9">人工验收清单<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ul>
 <li>[ ] 【整体交付物验收问题 1】</li>
 <li>[ ] 【整体交付物验收问题 2】</li>
@@ -1517,10 +1534,9 @@
 <li>[ ] 【整体交付物验收问题 5】</li>
 </ul>
 <hr />
-<h2 id="_14">延伸玩法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h2 id="_10">延伸玩法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>变体 1</strong>：【描述一种变体用法】</li>
-<li><strong>变体 2</strong>：【描述另一种变体用法】</li>
 <li><strong>进阶组合</strong>：【描述如何与其他工作流组合使用】</li>
 </ul>
 
