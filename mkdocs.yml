@@ -1,0 +1,73 @@
+site_name: AI 工作流图鉴
+site_description: 30 个真实岗位的多专家 AI 协作方法
+site_author: kkkkof2025
+site_url: https://kkkkof2025.github.io/WorkFlow/
+repo_name: kkkkof2025/WorkFlow
+repo_url: https://github.com/kkkkof2025/WorkFlow
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: zh
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 首页: index.md
+  - 快速入门:
+      - 什么是工作流卡: guide/what-is-workflow-card.md
+      - Style 工程规范: guide/style-engineering.md
+      - 工作流卡模板: guide/workflow-card-template.md
+  - 工作流总览: chapters/00-workflow-map.md
+  - 内容创作:
+      - 短视频内容创作工作流: chapters/01-content-creator.md
+  - 项目管理:
+      - 需求到计划工作流: chapters/02-project-management.md
+  - 工会宣传:
+      - 活动宣传故事工作流: chapters/03-union-activity.md
+  - Prompt 工程:
+      - 整书规划提示词: prompts/book-planning.md
+      - 工作流生成提示词: prompts/workflow-generation.md
+      - 章节生成提示词: prompts/chapter-generation.md
+      - 专家节点提示词生成: prompts/node-prompt-generation.md
+      - 风格审查提示词: prompts/style-review.md
+      - 质量检查提示词: prompts/quality-check.md
+      - 最终润色提示词: prompts/final-polish.md

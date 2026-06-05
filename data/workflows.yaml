@@ -1,0 +1,477 @@
+workflows:
+
+  # 第一章：内容创作
+  - id: "01"
+    name: 从一个想法到完整短视频的 AI 多专家工作流
+    category: 内容创作
+    role: 短视频创作者、自媒体运营
+    scene: 有一个内容想法，需要从选题到发布完成完整短视频生产
+    output: 选题方向 + 完整脚本 + 分镜 + 图像提示词 + 配音文案 + 发布标题
+    nodes:
+      - 选题判断专家
+      - 故事选取专家
+      - 故事扩写专家
+      - 脚本生成专家
+      - 分镜设计专家
+      - 图像生成提示词专家
+      - 视频生成提示词专家
+      - 配音文案专家
+      - 字幕包装专家
+      - 发布复盘专家
+    chapter: 01-content-creator
+    priority: P0
+
+  - id: "02"
+    name: 从关键词到短剧提案的 AI 多专家工作流
+    category: 内容创作
+    role: 短剧编剧、内容策划
+    scene: 拿到一个关键词或热点，需要完成短剧提案、故事梗概、角色设定、分集结构
+    output: 短剧提案书（含主题、角色、分集大纲）
+    nodes:
+      - 选题评估专家
+      - 故事核心提炼专家
+      - 角色设定专家
+      - 情节架构专家
+      - 分集结构专家
+      - 钩子设计专家
+      - 提案文档专家
+    chapter: 04-short-drama
+    priority: P1
+
+  - id: "03"
+    name: 从故事文本到角色完整设定的 AI 多专家工作流
+    category: 内容创作
+    role: 插画师、游戏设计、短剧创作者
+    scene: 已有故事文本，需要为主要角色生成完整的外貌、服装、性格、图像提示词
+    output: 角色设定文档 + 各类图像生成提示词
+    nodes:
+      - 角色内核分析专家
+      - 外貌设定专家
+      - 服装设定专家
+      - 性格与动机专家
+      - 角色图提示词专家
+    chapter: 05-character-design
+    priority: P1
+
+  - id: "04"
+    name: 从品牌背景到 Logo 方向的 AI 多专家工作流
+    category: 内容创作
+    role: 设计师、品牌运营、创业者
+    scene: 需要为品牌设计 Logo，从品牌理念到视觉方向到可用的图像提示词
+    output: Logo 方向报告 + Midjourney/SD 提示词 + 应用场景说明
+    nodes:
+      - 品牌解读专家
+      - 视觉方向专家
+      - 元素筛选专家
+      - 汉字变形专家
+      - Logo 提示词专家
+      - 应用场景专家
+    chapter: 06-logo-design
+    priority: P2
+
+  # 第二章：视频图像生产
+  - id: "05"
+    name: 从文案到分镜图像视频的完整生产工作流
+    category: 视频图像
+    role: 视频制作者、AI 视频创作者
+    scene: 已有文案或脚本，需要生成分镜、图像提示词、视频提示词、配音
+    output: 分镜脚本 + 图像提示词组 + 视频提示词组 + 配音文案
+    nodes:
+      - 文案拆解专家
+      - 分镜结构专家
+      - 画面描述专家
+      - 图像提示词专家
+      - 视频提示词专家
+      - 配音节奏专家
+    chapter: 07-video-production
+    priority: P1
+
+  - id: "06"
+    name: 从小说文案到 15 秒电影级分镜的 Seedance 工作流
+    category: 视频图像
+    role: AI 视频创作者、短视频导演
+    scene: 有小说文案或故事段落，需要拆解成适合 Seedance/即梦的分镜脚本
+    output: 15 秒分镜脚本（含镜头语言、画面描述、提示词）
+    nodes:
+      - 文本情绪分析专家
+      - 场景切割专家
+      - 镜头语言专家
+      - 分镜文案专家
+      - Seedance 提示词专家
+    chapter: 08-seedance
+    priority: P1
+
+  - id: "07"
+    name: 从需求到稳定图像生成提示词的 AI 工作流
+    category: 视频图像
+    role: 设计师、AI 绘图爱好者、内容创作者
+    scene: 需要为品牌、故事或产品生成一批风格统一的图像
+    output: 主提示词 + 风格词库 + 反向提示词 + 批量生成方案
+    nodes:
+      - 需求解读专家
+      - 风格定义专家
+      - 主提示词专家
+      - 负面提示词专家
+      - 批量变体专家
+    chapter: 09-image-generation
+    priority: P2
+
+  - id: "08"
+    name: 从主题到完整音乐创作的 AI 工作流
+    category: 视频图像
+    role: 音乐创作者、短视频创作者、内容运营
+    scene: 有一个音乐主题或情绪方向，需要完成歌词、段落标记、风格描述
+    output: 完整歌词 + Suno/Udio 提示词 + 风格说明
+    nodes:
+      - 主题情绪专家
+      - 歌词结构专家
+      - 歌词创作专家
+      - 段落标记专家
+      - 音乐提示词专家
+    chapter: 10-music-creation
+    priority: P2
+
+  # 第三章：项目与工程
+  - id: "09"
+    name: 从混乱需求到可执行项目计划的 AI 多专家工作流
+    category: 项目工程
+    role: 项目经理、产品经理、团队负责人
+    scene: 接到一批混乱的需求，需要梳理清楚并生成可执行的项目计划
+    output: 需求清单 + 任务拆解 + 风险清单 + 排期计划 + 沟通计划
+    nodes:
+      - 需求澄清专家
+      - 干系人识别专家
+      - 任务拆解专家
+      - 风险识别专家
+      - 排期规划专家
+      - 资源评估专家
+      - 沟通计划专家
+      - 项目复盘专家
+    chapter: 02-project-management
+    priority: P0
+
+  - id: "10"
+    name: 从需求到代码上线的程序员 AI 工作流
+    category: 项目工程
+    role: 程序员、全栈开发者
+    scene: 接到一个功能需求，需要从技术方案到代码生成到测试上线
+    output: 技术方案文档 + 代码 + 测试用例 + 代码审查报告
+    nodes:
+      - 需求解析专家
+      - 技术方案专家
+      - 代码生成专家
+      - 代码审查专家
+      - 测试用例专家
+      - 重构建议专家
+    chapter: 11-developer
+    priority: P1
+
+  - id: "11"
+    name: 从项目目标到 Agent 分工的编程协作工作流
+    category: 项目工程
+    role: AI 应用开发者、技术负责人
+    scene: 需要用多个 AI Agent 协作完成一个编程项目
+    output: Agent 分工方案 + 任务队列 + 代码审查机制 + TODO 管理
+    nodes:
+      - 目标拆解专家
+      - Agent 角色设计专家
+      - 任务队列专家
+      - 代码整合专家
+      - 冲突检测专家
+    chapter: 12-agent-collaboration
+    priority: P2
+
+  - id: "12"
+    name: 从命令或配置到安全风险评估的 AI 工作流
+    category: 项目工程
+    role: 运维工程师、安全工程师、开发者
+    scene: 需要对命令、脚本、配置或日志做安全审查
+    output: 风险识别报告 + 修复建议 + 验证清单
+    nodes:
+      - 命令解析专家
+      - 风险识别专家
+      - 严重性评级专家
+      - 修复方案专家
+      - 验证清单专家
+    chapter: 13-security-review
+    priority: P2
+
+  - id: "13"
+    name: 从本地目录到 GitHub Pages 发布的 AI 工作流
+    category: 项目工程
+    role: 开源开发者、技术写作者
+    scene: 有一个本地项目，需要完成 Git 初始化、README、GitHub Pages 发布
+    output: README + GitHub Actions 配置 + 发布说明
+    nodes:
+      - 项目结构分析专家
+      - README 生成专家
+      - Git 配置专家
+      - GitHub Actions 专家
+      - 发布说明专家
+    chapter: 14-github-release
+    priority: P1
+
+  # 第四章：办公效率
+  - id: "14"
+    name: 从录音到完整会议纪要的 AI 多专家工作流
+    category: 办公效率
+    role: 行政、项目经理、产品经理
+    scene: 会议结束后，需要把录音或文字整理成规范的会议纪要
+    output: 会议纪要（含决策、待办、责任人、风险、后续追踪）
+    nodes:
+      - 内容梳理专家
+      - 决策提炼专家
+      - 待办识别专家
+      - 责任人分配专家
+      - 风险提示专家
+      - 纪要格式专家
+    chapter: 15-meeting-minutes
+    priority: P1
+
+  - id: "15"
+    name: 从零散材料到领导汇报的 AI 多专家工作流
+    category: 办公效率
+    role: 中层管理者、项目负责人、职场人
+    scene: 需要向上级汇报工作，手头只有零散的工作材料
+    output: 汇报大纲 + 重点摘要 + 风险说明 + 建议行动
+    nodes:
+      - 材料梳理专家
+      - 成果提炼专家
+      - 问题诊断专家
+      - 风险说明专家
+      - 汇报结构专家
+      - 表达优化专家
+    chapter: 16-leadership-report
+    priority: P0
+
+  - id: "16"
+    name: 从群聊记录到知识沉淀的 AI 工作流
+    category: 办公效率
+    role: 团队负责人、知识管理员、运营
+    scene: 群聊里产生了大量有价值的讨论，需要整理成可复用的知识
+    output: FAQ + 共识清单 + 待办清单 + 资料索引 + 问题榜
+    nodes:
+      - 主题识别专家
+      - FAQ 提炼专家
+      - 共识提取专家
+      - 待办梳理专家
+      - 知识卡片专家
+    chapter: 17-chat-knowledge
+    priority: P2
+
+  - id: "17"
+    name: 从评论文本到观点分析的 AI 工作流
+    category: 办公效率
+    role: 内容运营、产品经理、市场研究
+    scene: 收集了大量用户评论，需要分析观点分布和情绪倾向
+    output: 观点阵营分析 + 争议点 + 共识点 + 情绪分布报告
+    nodes:
+      - 评论清洗专家
+      - 观点分类专家
+      - 情绪识别专家
+      - 争议分析专家
+      - 报告生成专家
+    chapter: 18-comment-analysis
+    priority: P2
+
+  - id: "18"
+    name: 从表格数据到分析报告的 AI 工作流
+    category: 办公效率
+    role: 数据分析师、运营人员、财务人员
+    scene: 有一份业务数据表格，需要产出分析报告
+    output: 问题发现清单 + 图表建议 + 结论摘要 + 汇报文案
+    nodes:
+      - 数据解读专家
+      - 异常识别专家
+      - 趋势分析专家
+      - 图表建议专家
+      - 报告撰写专家
+    chapter: 19-data-analysis
+    priority: P1
+
+  # 第五章：教育学习
+  - id: "19"
+    name: 从教学主题到完整教案的 AI 多专家工作流
+    category: 教育学习
+    role: 中小学教师、培训讲师
+    scene: 需要为一个教学主题准备完整的教案和课堂活动
+    output: 教案 + 课堂活动设计 + 练习题 + 板书设计
+    nodes:
+      - 知识点梳理专家
+      - 教学目标专家
+      - 课堂活动专家
+      - 练习题生成专家
+      - 板书设计专家
+      - 教案格式专家
+    chapter: 20-teacher-lesson
+    priority: P1
+
+  - id: "20"
+    name: 从知识点到备考学习计划的 AI 工作流
+    category: 教育学习
+    role: 学生、备考人员
+    scene: 有一个学习主题或考试科目，需要制定学习计划
+    output: 学习计划 + 错题分析 + 复习卡片 + 模拟测试
+    nodes:
+      - 知识结构专家
+      - 薄弱点分析专家
+      - 计划制定专家
+      - 复习卡片专家
+      - 模拟测试专家
+    chapter: 21-student-learning
+    priority: P2
+
+  # 第六章：职能支持
+  - id: "21"
+    name: 从岗位需求到人才录用的 AI 招聘工作流
+    category: 职能支持
+    role: HR、招聘经理
+    scene: 需要为一个岗位完成从 JD 撰写到候选人评估的完整招聘流程
+    output: JD + 简历筛选标准 + 面试题库 + 候选人评估报告
+    nodes:
+      - 岗位分析专家
+      - JD 撰写专家
+      - 简历筛选专家
+      - 面试题设计专家
+      - 候选人评估专家
+    chapter: 22-hr-recruitment
+    priority: P1
+
+  - id: "22"
+    name: 从客户信息到销售成交的 AI 跟进工作流
+    category: 职能支持
+    role: 销售、客户经理
+    scene: 有一个新客户线索，需要完成从初次接触到成交的完整跟进
+    output: 沟通策略 + 跟进话术 + 异议处理脚本 + 成交复盘
+    nodes:
+      - 客户画像专家
+      - 沟通策略专家
+      - 话术生成专家
+      - 异议处理专家
+      - 复盘分析专家
+    chapter: 23-sales-followup
+    priority: P1
+
+  - id: "23"
+    name: 从用户投诉到问题闭环的 AI 客服工作流
+    category: 职能支持
+    role: 客服人员、运营专员
+    scene: 接到用户投诉，需要从情绪安抚到问题解决到后续跟进
+    output: 回复模板 + 问题定位报告 + 升级策略 + 改进建议
+    nodes:
+      - 情绪识别专家
+      - 问题定位专家
+      - 回复生成专家
+      - 升级判断专家
+      - 改进建议专家
+    chapter: 24-customer-service
+    priority: P2
+
+  - id: "24"
+    name: 从票据到报销申请的 AI 财务工作流
+    category: 职能支持
+    role: 财务专员、行政
+    scene: 需要整理一批报销票据并提交规范的报销申请
+    output: 报销清单 + 异常检查报告 + 说明文案
+    nodes:
+      - 票据分类专家
+      - 合规检查专家
+      - 清单生成专家
+      - 异常说明专家
+      - 审批文案专家
+    chapter: 25-expense-reimbursement
+    priority: P2
+
+  - id: "25"
+    name: 从合同文本到风险清单的 AI 法务初审工作流
+    category: 职能支持
+    role: 法务、合同管理员、创业者
+    scene: 收到合同文本，需要快速完成初步风险审查
+    output: 风险条款清单 + 修改建议 + 问题清单
+    nodes:
+      - 合同结构分析专家
+      - 风险条款识别专家
+      - 修改建议专家
+      - 问题清单专家
+    chapter: 26-legal-review
+    priority: P2
+
+  # 第七章：知识管理
+  - id: "26"
+    name: 从活动素材到有温度宣传故事的工会宣传工作流
+    category: 知识管理
+    role: 工会干部、宣传员、企业文化岗
+    scene: 活动结束后，需要把素材整理成有故事感的宣传内容
+    output: 新闻稿 + 短视频脚本 + 标题金句 + 宣传总结
+    nodes:
+      - 活动素材整理专家
+      - 人物故事挖掘专家
+      - 情绪主线设计专家
+      - 新闻稿生成专家
+      - 短视频脚本专家
+      - 标题与金句专家
+      - 真实性审查专家
+      - 宣传复盘专家
+    chapter: 03-union-activity
+    priority: P0
+
+  - id: "27"
+    name: 从文章笔记到个人知识库的整理工作流
+    category: 知识管理
+    role: 知识工作者、研究员、学习者
+    scene: 积累了大量文章、笔记和链接，需要整理成可复用的知识库
+    output: 知识卡片 + 主题归类 + 行动清单
+    nodes:
+      - 内容过滤专家
+      - 主题归类专家
+      - 知识卡片专家
+      - 行动提取专家
+      - 索引生成专家
+    chapter: 27-personal-knowledge
+    priority: P2
+
+  - id: "28"
+    name: 从工作记录到月度复盘的 AI 个人复盘工作流
+    category: 知识管理
+    role: 职场人、创业者、自由职业者
+    scene: 月底需要做个人复盘，手头只有零散的工作记录
+    output: 复盘报告（成果、问题、根因、改进计划）
+    nodes:
+      - 事件梳理专家
+      - 成果盘点专家
+      - 问题识别专家
+      - 根因分析专家
+      - 改进计划专家
+    chapter: 28-personal-review
+    priority: P2
+
+  # 第八章：开源与发布
+  - id: "29"
+    name: 从 Markdown 文档到 MkDocs 电子书的发布工作流
+    category: 开源发布
+    role: 技术写作者、开源开发者
+    scene: 有一批 Markdown 文档，需要配置 MkDocs 并发布为 GitHub Pages 电子书
+    output: mkdocs.yml + GitHub Actions 配置 + 首页 + 导航结构
+    nodes:
+      - 文档结构专家
+      - 导航设计专家
+      - mkdocs 配置专家
+      - GitHub Actions 专家
+      - 首页优化专家
+    chapter: 29-mkdocs-publish
+    priority: P1
+
+  - id: "30"
+    name: 从票据报销到财务规范化的 AI 财务管理工作流
+    category: 知识管理
+    role: 财务经理、创业者
+    scene: 需要建立一套可重复使用的财务报销和管理标准
+    output: 报销规范文档 + 审核清单 + 异常处理流程
+    nodes:
+      - 规范梳理专家
+      - 流程设计专家
+      - 清单生成专家
+      - 异常处理专家
+      - 文档撰写专家
+    chapter: 30-financial-management
+    priority: P3
