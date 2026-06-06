@@ -62,6 +62,11 @@ nav:
       - 短剧策划工作流: chapters/04-short-drama-planning.md
       - 角色设定工作流: chapters/05-character-design.md
       - 视频分镜工作流: chapters/06-video-storyboard.md
+  - 视觉与音乐:
+      - 图像生成工作流: chapters/07-image-generation.md
+      - AI 视频生成工作流: chapters/08-ai-video-generation.md
+      - Logo 创意工作流: chapters/09-logo-design.md
+      - 音乐创作工作流: chapters/10-music-creation.md
   - 项目管理:
       - 需求到计划工作流: chapters/02-project-management.md
   - 工会宣传:
@@ -81,3 +86,4 @@ nav:
       - Prompt 与 Style 关系: guide/prompt-and-style.md
       - 第二阶段审查记录: guide/stage-2-review.md
       - 第三阶段批次A审查: guide/stage-3-batch-a-review.md
+      - 第三阶段批次B审查: guide/stage-3-batch-b-review.md
