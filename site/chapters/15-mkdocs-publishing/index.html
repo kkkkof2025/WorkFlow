@@ -1,0 +1,5710 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="30 个真实岗位的多专家 AI 协作方法">
+      
+      
+        <meta name="author" content="kkkkof2025">
+      
+      
+        <link rel="canonical" href="https://kkkkof2025.github.io/WorkFlow/chapters/15-mkdocs-publishing/">
+      
+      
+        <link rel="prev" href="../14-github-publishing/">
+      
+      
+        <link rel="next" href="../03-union-activity/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>MkDocs 发布工作流 - AI 工作流图鉴</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#15-markdown-github-pages-ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="AI 工作流图鉴" class="md-header__button md-logo" aria-label="AI 工作流图鉴" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 工作流图鉴
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MkDocs 发布工作流
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kkkkof2025/WorkFlow" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kkkkof2025/WorkFlow
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/what-is-workflow-card/" class="md-tabs__link">
+          
+  
+  
+  快速入门
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../00-workflow-map/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  工作流总览
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-content-creator/" class="md-tabs__link">
+          
+  
+  
+  内容创作
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../07-image-generation/" class="md-tabs__link">
+          
+  
+  
+  视觉与音乐
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../02-project-management/" class="md-tabs__link">
+          
+  
+  
+  项目管理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../11-program-development/" class="md-tabs__link">
+          
+  
+  
+  项目与工程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../03-union-activity/" class="md-tabs__link">
+          
+  
+  
+  工会宣传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prompts/book-planning/" class="md-tabs__link">
+          
+  
+  
+  Prompt 工程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/workflow-card-template/" class="md-tabs__link">
+          
+  
+  
+  生产标准
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 工作流图鉴" class="md-nav__button md-logo" aria-label="AI 工作流图鉴" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 工作流图鉴
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kkkkof2025/WorkFlow" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kkkkof2025/WorkFlow
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    快速入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/what-is-workflow-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    什么是工作流卡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/style-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style 工程规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/workflow-card-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流卡模板
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-workflow-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内容创作
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    内容创作
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-content-creator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    短视频内容创作工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-short-drama-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    短剧策划工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-character-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    角色设定工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-video-storyboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频分镜工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视觉与音乐
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    视觉与音乐
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-image-generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像生成工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-ai-video-generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 视频生成工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-logo-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logo 创意工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-music-creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音乐创作工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目管理
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目管理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-project-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    需求到计划工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目与工程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目与工程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-program-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    程序员开发工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-agent-collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编程 Agent 协作工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-security-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全审查工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-github-publishing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 发布工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs 发布工作流
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs 发布工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入材料清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流总览
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        专家节点详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="专家节点详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 1：文档结构规划专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 1：文档结构规划专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 2：MkDocs 配置专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 2：MkDocs 配置专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 3：Material 主题专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 3：Material 主题专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 4：导航结构专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 4：导航结构专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 5：Markdown 质量检查专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 5：Markdown 质量检查专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 6：GitHub Actions 部署专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 6：GitHub Actions 部署专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 7：GitHub Pages 配置专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 7：GitHub Pages 配置专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 8：构建错误修复专家（招牌节点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 8：构建错误修复专家（招牌节点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 9：发布验收专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 9：发布验收专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点交接说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最终输出模板
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见错误
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸玩法
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工会宣传
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工会宣传
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-union-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    活动宣传故事工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt 工程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prompt 工程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/book-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整书规划提示词
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/workflow-generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流生成提示词
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/chapter-generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    章节生成提示词
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/node-prompt-generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    专家节点提示词生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/style-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    风格审查提示词
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/quality-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质量检查提示词
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/final-polish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最终润色提示词
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生产标准
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    生产标准
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/workflow-card-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流卡模板
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/style-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style 工程规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/quality-standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质量标准
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/prompt-and-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt 与 Style 关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/stage-2-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二阶段审查记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/stage-3-batch-a-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三阶段批次A审查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/stage-3-batch-b-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三阶段批次B审查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/stage-3-batch-c-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三阶段批次C审查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入材料清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流总览
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        专家节点详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="专家节点详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 1：文档结构规划专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 1：文档结构规划专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 2：MkDocs 配置专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 2：MkDocs 配置专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 3：Material 主题专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 3：Material 主题专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 4：导航结构专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 4：导航结构专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 5：Markdown 质量检查专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 5：Markdown 质量检查专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 6：GitHub Actions 部署专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 6：GitHub Actions 部署专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 7：GitHub Pages 配置专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 7：GitHub Pages 配置专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 8：构建错误修复专家（招牌节点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 8：构建错误修复专家（招牌节点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点 9：发布验收专家
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="节点 9：发布验收专家">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 节点定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 输入与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 使用顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 提示词包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.4 提示词包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 快速生成版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 专家增强版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 自查审稿版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. 返修优化版
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 交付给下游节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6 人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点交接说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最终输出模板
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见错误
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工验收清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸玩法
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="15-markdown-github-pages-ai">工作流 15：从 Markdown 文档到 GitHub Pages 电子书站点的 AI 发布工作流<a class="headerlink" href="#15-markdown-github-pages-ai" title="Permanent link">&para;</a></h1>
+<p><strong>适用岗位</strong>：技术写作者、课程作者、开源作者、比赛项目作者</p>
+<p><strong>真实场景</strong>：你有一批 Markdown 文档（教程、笔记、电子书章节），想用 MkDocs + Material 主题做成漂亮的在线文档站点，通过 GitHub Pages 发布，但常卡在配置错误、构建失败、Pages 不显示等问题上。</p>
+<p><strong>最终目标</strong>：一个可访问的 GitHub Pages 文档站点，包含：规划好的文档结构、正确的 mkdocs.yml 配置、Material 主题、清晰的导航、通过 <code>mkdocs build --strict</code> 的文档、自动部署的 GitHub Actions，以及发布验收确认。</p>
+<hr />
+<h2 id="_1">输入材料清单<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Markdown 文档（一批 .md 文件）</li>
+<li>站点基本信息（站点名、描述、作者、GitHub 用户名/仓库名）</li>
+<li>文档主题/领域（教程 / 电子书 / API 文档 / 笔记）</li>
+<li>是否需要特殊功能（搜索、代码高亮、多语言等）</li>
+<li>GitHub 仓库情况（是否已创建、是否已启用 Pages）</li>
+</ul>
+<hr />
+<h2 id="_2">工作流总览<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>节点 1：文档结构规划专家
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ↓ 输出：文档目录结构 + 章节组织
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>节点 2：MkDocs 配置专家
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  ↓ 输出：mkdocs.yml 基础配置
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>节点 3：Material 主题专家
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  ↓ 输出：主题配置（外观 + 功能）
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>节点 4：导航结构专家
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  ↓ 输出：nav 导航配置
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>节点 5：Markdown 质量检查专家
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  ↓ 输出：Markdown 问题清单 + 修正
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>节点 6：GitHub Actions 部署专家
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  ↓ 输出：deploy.yml 部署配置
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>节点 7：GitHub Pages 配置专家
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  ↓ 输出：Pages 设置步骤
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>节点 8：构建错误修复专家（招牌节点）
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  ↓ 输出：构建错误诊断 + 修复
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>节点 9：发布验收专家
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  ↓ 输出：发布验收清单结果
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>最终交付：可访问的 GitHub Pages 文档站点
+</code></pre></div>
+<hr />
+<h2 id="_3">专家节点详解<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>每个节点包含六部分：节点定位、输入与输出、使用顺序、提示词包（A 快速 / B 专家 / C 自查 / D 返修）、交付给下游节点、人工验收清单。</p>
+<p><strong>C 自查审稿版和 D 返修优化版是当前节点内部的工作模式，不是新的专家角色。</strong></p>
+<div class="admonition note">
+<p class="admonition-title">命令使用提示</p>
+<p>本工作流包含 pip、mkdocs、git 命令。命令中的仓库名、用户名、路径需替换为你自己的实际值。</p>
+</div>
+<hr />
+<h3 id="1">节点 1：文档结构规划专家<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h4 id="11">1.1 节点定位<a class="headerlink" href="#11" title="Permanent link">&para;</a></h4>
+<p>将零散的 Markdown 文档规划为有逻辑的文档结构，确定章节组织和文件命名。良好的文档结构是站点可读性和可维护性的基础。</p>
+<h4 id="12">1.2 输入与输出<a class="headerlink" href="#12" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：Markdown 文档清单 + 文档主题/领域</p>
+<p><strong>输出</strong>：文档目录结构（docs/ 下的组织）+ 文件命名建议 + 章节顺序</p>
+<h4 id="13">1.3 使用顺序<a class="headerlink" href="#13" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」得到结构规划初稿。</li>
+<li>文档数量多或逻辑复杂时，改用「专家增强版」。</li>
+<li>用「自查审稿版」检查结构是否清晰、命名是否规范。</li>
+<li>有问题则用「返修优化版」调整。</li>
+<li>对照 1.6 验收清单确认，通过后交给节点 2 和节点 4。</li>
+</ol>
+<h4 id="14">1.4 提示词包<a class="headerlink" href="#14" title="Permanent link">&para;</a></h4>
+<h5 id="a">A. 快速生成版<a class="headerlink" href="#a" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>你是一位文档架构师。请为以下 Markdown 文档规划站点结构。
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>文档清单：【粘贴文件列表或文档主题列表】
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>文档领域：【填入教程/电子书/API文档】
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>输出：
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>1. docs/ 目录结构（如何分组组织）
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2. 文件命名建议（小写、连字符、有序前缀如 01-）
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>3. 章节阅读顺序
+</code></pre></div>
+<h5 id="b">B. 专家增强版<a class="headerlink" href="#b" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>你是一位资深文档架构师，熟悉 MkDocs 项目组织。
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>任务：为以下文档规划清晰的站点结构。
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>输入：
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>- 文档清单：【粘贴文件列表/主题列表】
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>- 文档领域：【填入】
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>- 目标读者：【填入】
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>处理步骤：
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>1. 按逻辑分组文档（如：入门/进阶/参考/附录）
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2. 设计 docs/ 目录结构（分组用子目录）
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>3. 规范文件命名（小写连字符，必要时用数字前缀控制顺序）
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>4. 确定章节阅读顺序（从入门到深入）
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>5. 识别需补充的文档（如缺少首页 index.md）
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>输出格式：
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>- docs/ 目录树
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>- 文件命名对照表（原文件 → 建议文件名）
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>- 章节顺序说明
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>- 需补充的文档清单
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>约束：文件名用小写+连字符，避免空格和中文文件名；每个分组逻辑清晰；必须有 index.md 作为首页。
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>质量标准：读者能顺着结构从入门到精通，维护者能快速定位文档。
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>常见失败情况：文件名含空格或中文导致部署问题；缺少 index.md 导致首页空白；结构混乱无逻辑分组。
+</code></pre></div>
+<h5 id="c">C. 自查审稿版<a class="headerlink" href="#c" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>请检查以下文档结构规划是否存在以下问题：
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>1. 文件名是否都是小写+连字符（无空格、无中文）？
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2. 是否有 index.md 作为站点首页？
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>3. 分组是否有清晰逻辑？
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>4. 章节顺序是否从入门到深入？
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>【粘贴文档结构规划】
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d">D. 返修优化版<a class="headerlink" href="#d" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>根据自查意见修改文档结构。规范文件命名，补充 index.md，理顺分组逻辑和章节顺序。
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>原始规划：【粘贴原始规划】
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="15">1.5 交付给下游节点<a class="headerlink" href="#15" title="Permanent link">&para;</a></h4>
+<p>将文档目录结构复制，交给节点 2（MkDocs 配置专家）和节点 4（导航结构专家）。nav 配置需对应此结构。</p>
+<h4 id="16">1.6 人工验收清单<a class="headerlink" href="#16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] 文件名是否都规范（小写+连字符，无空格无中文）？</li>
+<li>[ ] 是否有 index.md 首页？</li>
+<li>[ ] 分组逻辑是否清晰？</li>
+</ul>
+<hr />
+<h3 id="2mkdocs">节点 2：MkDocs 配置专家<a class="headerlink" href="#2mkdocs" title="Permanent link">&para;</a></h3>
+<h4 id="21">2.1 节点定位<a class="headerlink" href="#21" title="Permanent link">&para;</a></h4>
+<p>生成正确的 mkdocs.yml 基础配置，包含站点信息、仓库信息和必要的插件扩展。配置是 MkDocs 项目的核心，配置错误会直接导致构建失败。</p>
+<h4 id="22">2.2 输入与输出<a class="headerlink" href="#22" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：节点 1 文档结构 + 站点基本信息</p>
+<p><strong>输出</strong>：mkdocs.yml 基础配置（site 信息 + repo 信息 + markdown_extensions）+ requirements.txt</p>
+<h4 id="23">2.3 使用顺序<a class="headerlink" href="#23" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」生成基础配置。</li>
+<li>需要特殊扩展或插件时，改用「专家增强版」。</li>
+<li>用「自查审稿版」检查 YAML 语法、必填项、依赖完整性。</li>
+<li>有问题则用「返修优化版」修正。</li>
+<li>对照 2.6 验收清单确认，通过后交给节点 3。</li>
+</ol>
+<h4 id="24">2.4 提示词包<a class="headerlink" href="#24" title="Permanent link">&para;</a></h4>
+<h5 id="a_1">A. 快速生成版<a class="headerlink" href="#a_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>你是一位 MkDocs 配置助手。请生成 mkdocs.yml 基础配置。
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>站点信息：【填入 site_name、描述、作者】
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>GitHub：【填入用户名/仓库名】
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>输出：
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>1. mkdocs.yml（含 site_name/site_description/site_author/site_url/repo_name/repo_url/markdown_extensions）
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2. requirements.txt（mkdocs + 用到的插件，每行一个）
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>注意：YAML 缩进用空格，不用 Tab。
+</code></pre></div>
+<h5 id="b_1">B. 专家增强版<a class="headerlink" href="#b_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>你是一位 MkDocs 配置专家。
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>任务：生成完整正确的 mkdocs.yml 基础配置和依赖文件。
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>输入：
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>- 站点信息：【填入 site_name/描述/作者】
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>- GitHub 信息：【填入用户名/仓库名】
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>- 文档结构：【粘贴节点1结构】
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>- 特殊功能需求：【填入搜索/代码高亮/数学公式等】
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>处理步骤：
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>1. 配置站点元信息（site_name、site_description、site_author、site_url）
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2. 配置仓库信息（repo_name、repo_url）—— site_url 和 repo_url 必须用实际的用户名/仓库名
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>3. 配置 markdown_extensions（代码高亮、admonition、目录等常用扩展）
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>4. 配置必要插件（search 等）
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>5. 生成对应的 requirements.txt（每个依赖一行，含版本下限）
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>site_url 格式说明：GitHub Pages 项目站点为 https://&lt;用户名&gt;.github.io/&lt;仓库名&gt;/
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>输出格式：
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>- 完整 mkdocs.yml（代码块，正确缩进）
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>- requirements.txt（代码块，每行一个依赖）
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>- 占位符替换说明（哪些需要用户改成自己的值）
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>约束：
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>- YAML 缩进统一用空格（2 空格），绝不用 Tab
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>- site_url 必须是正确的 GitHub Pages 格式
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>- requirements.txt 必须包含 mkdocs.yml 中用到的所有插件
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>- 不配置未安装的插件（否则构建失败）
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>质量标准：配置可直接用于 mkdocs build，不缺依赖、不报语法错。
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>常见失败情况：site_url 用了占位符没替换；配置了插件但 requirements.txt 没加导致构建失败；YAML 用了 Tab 缩进。
+</code></pre></div>
+<h5 id="c_1">C. 自查审稿版<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>请检查以下 mkdocs.yml 配置是否存在以下问题：
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>1. YAML 缩进是否统一用空格（无 Tab）？
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2. site_url 是否是正确的 GitHub Pages 格式（https://用户名.github.io/仓库名/）？
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>3. mkdocs.yml 中配置的每个插件是否都在 requirements.txt 中？
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>4. 是否配置了未安装的插件（会导致构建失败）？
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>5. 必填项（site_name 等）是否齐全？
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>【粘贴 mkdocs.yml 和 requirements.txt】
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_1">D. 返修优化版<a class="headerlink" href="#d_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>根据自查意见修正配置。统一缩进为空格，修正 site_url 格式，补齐 requirements.txt 中缺失的插件依赖，移除未安装的插件配置。
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>原始配置：【粘贴原始 mkdocs.yml 和 requirements.txt】
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="25">2.5 交付给下游节点<a class="headerlink" href="#25" title="Permanent link">&para;</a></h4>
+<p>将 mkdocs.yml 和 requirements.txt 复制，交给节点 3（Material 主题专家）。主题配置将加入 mkdocs.yml。</p>
+<h4 id="26">2.6 人工验收清单<a class="headerlink" href="#26" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] YAML 缩进是否统一用空格（无 Tab）？</li>
+<li>[ ] site_url 是否是正确的 Pages 格式？</li>
+<li>[ ] requirements.txt 是否包含所有配置的插件？</li>
+<li>[ ] 必填项是否齐全？</li>
+</ul>
+<hr />
+<h3 id="3material">节点 3：Material 主题专家<a class="headerlink" href="#3material" title="Permanent link">&para;</a></h3>
+<h4 id="31">3.1 节点定位<a class="headerlink" href="#31" title="Permanent link">&para;</a></h4>
+<p>配置 Material for MkDocs 主题，包括外观（配色、字体）和功能特性（导航、搜索、代码复制等）。Material 是 MkDocs 最流行的主题，合理配置能大幅提升文档站点的体验。</p>
+<h4 id="32">3.2 输入与输出<a class="headerlink" href="#32" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：节点 2 mkdocs.yml + 外观偏好</p>
+<p><strong>输出</strong>：theme 配置块（含 features 和 palette）+ requirements.txt 更新</p>
+<h4 id="33">3.3 使用顺序<a class="headerlink" href="#33" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」得到主题配置。</li>
+<li>需要精细外观定制时，改用「专家增强版」。</li>
+<li>用「自查审稿版」检查主题配置是否正确、依赖是否补充。</li>
+<li>有问题则用「返修优化版」修正。</li>
+<li>对照 3.6 验收清单确认，通过后交给节点 4。</li>
+</ol>
+<h4 id="34">3.4 提示词包<a class="headerlink" href="#34" title="Permanent link">&para;</a></h4>
+<h5 id="a_2">A. 快速生成版<a class="headerlink" href="#a_2" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>你是一位 Material for MkDocs 配置助手。请生成主题配置。
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>当前 mkdocs.yml：【粘贴节点2配置】
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>外观偏好：【填入配色/明暗模式偏好】
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>输出：
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>1. theme 配置块（name: material + 常用 features + palette 明暗切换）
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2. requirements.txt 需补充 mkdocs-material
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>注意：features 用列表格式，缩进正确。
+</code></pre></div>
+<h5 id="b_2">B. 专家增强版<a class="headerlink" href="#b_2" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>你是一位 Material for MkDocs 主题专家。
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>任务：配置 Material 主题，优化文档站点的外观和功能。
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>输入：
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>- 当前 mkdocs.yml：【粘贴节点2】
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>- 外观偏好：【填入配色/字体/明暗模式】
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>- 文档类型：【填入教程/电子书等，影响功能选择】
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>配置内容：
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>1. 主题基础（name: material，language 中文站设 zh）
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2. 配色方案（palette，建议配置明暗模式切换）
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>3. 功能特性（features）：
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>   - navigation.tabs / navigation.sections（导航组织）
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>   - navigation.top（返回顶部）
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>   - search.highlight / search.suggest（搜索增强）
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>   - content.code.copy（代码块复制按钮）
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>   - toc.integrate / toc.follow（目录）
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>4. 更新 requirements.txt（添加 mkdocs-material）
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>输出格式：
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>- theme 配置块（完整 YAML，正确缩进）
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>- requirements.txt 更新说明
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>- 各 feature 作用说明
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>约束：features 必须是 Material 实际支持的（不编造）；中文站点 language 设为 zh；缩进规范。
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>质量标准：主题配置可直接合入 mkdocs.yml 并正常渲染，功能符合文档类型需求。
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>常见失败情况：配置了不存在的 feature 导致警告；忘记把 mkdocs-material 加入 requirements.txt；palette 配置缩进错误。
+</code></pre></div>
+<h5 id="c_2">C. 自查审稿版<a class="headerlink" href="#c_2" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>请检查以下 Material 主题配置是否存在以下问题：
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>1. features 是否都是 Material 实际支持的（无编造项）？
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2. mkdocs-material 是否已加入 requirements.txt？
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>3. theme 配置块的 YAML 缩进是否正确？
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>4. 中文站点的 language 是否设为 zh？
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>【粘贴主题配置】
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_2">D. 返修优化版<a class="headerlink" href="#d_2" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>根据自查意见修正主题配置。移除不存在的 feature，补充 mkdocs-material 依赖，修正缩进，设置正确的 language。
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>原始配置：【粘贴原始配置】
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="35">3.5 交付给下游节点<a class="headerlink" href="#35" title="Permanent link">&para;</a></h4>
+<p>将 theme 配置和更新的 requirements.txt 复制，交给节点 4（导航结构专家）。</p>
+<h4 id="36">3.6 人工验收清单<a class="headerlink" href="#36" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] features 是否都是 Material 支持的项？</li>
+<li>[ ] mkdocs-material 是否在 requirements.txt 中？</li>
+<li>[ ] theme 配置缩进是否正确？</li>
+</ul>
+<hr />
+<h3 id="4">节点 4：导航结构专家<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="41">4.1 节点定位<a class="headerlink" href="#41" title="Permanent link">&para;</a></h4>
+<p>配置 mkdocs.yml 的 nav 导航，将文档结构映射为站点导航菜单。nav 配置错误（引用不存在的文件）是 <code>--strict</code> 模式构建失败的最常见原因。</p>
+<h4 id="42">4.2 输入与输出<a class="headerlink" href="#42" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：节点 1 文档结构 + docs/ 实际文件清单</p>
+<p><strong>输出</strong>：nav 配置块（导航层级 + 文件路径映射）</p>
+<h4 id="43">4.3 使用顺序<a class="headerlink" href="#43" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」生成 nav 配置。</li>
+<li>文档层级深或分组多时，改用「专家增强版」。</li>
+<li>用「自查审稿版」检查 nav 引用的文件是否都存在。</li>
+<li>有问题则用「返修优化版」修正。</li>
+<li>对照 4.6 验收清单确认，通过后交给节点 5。</li>
+</ol>
+<h4 id="44">4.4 提示词包<a class="headerlink" href="#44" title="Permanent link">&para;</a></h4>
+<h5 id="a_3">A. 快速生成版<a class="headerlink" href="#a_3" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>你是一位 MkDocs 导航配置助手。请生成 nav 配置。
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>文档结构：【粘贴节点1结构】
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>docs/ 实际文件清单：【粘贴 docs 下的文件列表】
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>输出：nav 配置块（YAML），导航标题对应文件路径。
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>注意：每个引用的文件路径必须是 docs/ 下真实存在的文件，路径相对 docs/。
+</code></pre></div>
+<h5 id="b_3">B. 专家增强版<a class="headerlink" href="#b_3" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>你是一位 MkDocs 导航配置专家。
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>任务：生成 nav 导航配置，确保所有引用的文件真实存在。
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>输入：
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>- 文档结构规划：【粘贴节点1】
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>- docs/ 实际文件清单：【粘贴 docs 目录下所有 .md 文件的真实路径】
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>处理步骤：
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>1. 将文档结构映射为 nav 层级
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2. 每个导航项使用 &quot;标题: 路径&quot; 格式，路径相对 docs/ 目录
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>3. 用嵌套实现分组（一级菜单下嵌套二级）
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>4. 确保首页（index.md）在 nav 第一项
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>5. 逐一核对：nav 中每个路径都在实际文件清单中存在
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>输出格式：
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>- nav 配置块（完整 YAML，正确缩进）
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>- nav 路径与实际文件的对照核对表（路径 | 文件是否存在）
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>约束（关键）：
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>- nav 引用的每个文件必须在 docs/ 下真实存在（否则 --strict 构建失败）
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>- 路径相对于 docs/ 目录，不带 docs/ 前缀
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>- 缩进规范，嵌套层级清晰
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>质量标准：nav 配置不引用任何不存在的文件，mkdocs build --strict 不因 nav 报错。
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>常见失败情况：nav 引用了还没创建的文件导致 --strict 失败；路径写错（多了或少了 docs/ 前缀）；缩进错误导致层级混乱。
+</code></pre></div>
+<h5 id="c_3">C. 自查审稿版<a class="headerlink" href="#c_3" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>请检查以下 nav 配置是否存在以下问题：
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>1. nav 引用的每个文件路径是否都在 docs/ 实际文件清单中存在？
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2. 路径是否正确（相对 docs/，不带 docs/ 前缀）？
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>3. index.md 是否在 nav 第一项？
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>4. 嵌套缩进是否正确？
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>【粘贴 nav 配置】
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>【粘贴 docs/ 实际文件清单】
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_3">D. 返修优化版<a class="headerlink" href="#d_3" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>根据自查意见修正 nav 配置。移除或修正引用不存在文件的路径，校正路径格式，调整缩进层级。
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>原始 nav：【粘贴原始 nav】
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>docs/ 实际文件清单：【粘贴文件清单】
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="45">4.5 交付给下游节点<a class="headerlink" href="#45" title="Permanent link">&para;</a></h4>
+<p>将完整的 mkdocs.yml（含 site/theme/nav）复制，交给节点 5（Markdown 质量检查专家）。</p>
+<h4 id="46">4.6 人工验收清单<a class="headerlink" href="#46" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] nav 引用的每个文件是否都真实存在？</li>
+<li>[ ] 路径格式是否正确（相对 docs/）？</li>
+<li>[ ] index.md 是否在第一项？</li>
+<li>[ ] 嵌套缩进是否正确？</li>
+</ul>
+<hr />
+<h3 id="5markdown">节点 5：Markdown 质量检查专家<a class="headerlink" href="#5markdown" title="Permanent link">&para;</a></h3>
+<h4 id="51">5.1 节点定位<a class="headerlink" href="#51" title="Permanent link">&para;</a></h4>
+<p>检查 Markdown 文档的格式问题，重点是会导致渲染异常或构建失败的问题。常见如代码块未闭合、链接失效、图片路径错误。</p>
+<h4 id="52">5.2 输入与输出<a class="headerlink" href="#52" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：docs/ 下的 Markdown 文档</p>
+<p><strong>输出</strong>：Markdown 问题清单 + 修正建议</p>
+<h4 id="53">5.3 使用顺序<a class="headerlink" href="#53" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」检查常见格式问题。</li>
+<li>文档多或问题复杂时，改用「专家增强版」。</li>
+<li>用「自查审稿版」确认检查无遗漏。</li>
+<li>有问题则用「返修优化版」修正。</li>
+<li>对照 5.6 验收清单确认，通过后交给节点 6。</li>
+</ol>
+<h4 id="54">5.4 提示词包<a class="headerlink" href="#54" title="Permanent link">&para;</a></h4>
+<h5 id="a_4">A. 快速生成版<a class="headerlink" href="#a_4" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>你是一位 Markdown 质量检查员。请检查以下文档。
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>文档内容：【粘贴 Markdown】
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>检查：
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>1. 代码块是否成对闭合（```）
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2. 链接和图片路径是否有效
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>3. 标题层级是否合理（不跳级）
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>4. 表格语法是否正确
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>输出：问题清单（位置 + 问题 + 修正）
+</code></pre></div>
+<h5 id="b_4">B. 专家增强版<a class="headerlink" href="#b_4" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>你是一位技术文档质量专家。
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>任务：检查 Markdown 文档中会导致渲染异常或构建问题的格式错误。
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>输入：
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>- 文档内容：【粘贴 Markdown，或逐个文件检查】
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>检查项：
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>1. 代码块闭合（每个 ``` 是否成对，语言标注是否正确）
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>2. 嵌套代码块（文档中展示代码块时的转义/缩进是否正确）
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>3. 链接有效性（内部链接指向的文件/锚点是否存在，外部链接格式是否正确）
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>4. 图片路径（相对路径是否正确，图片文件是否存在）
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>5. 标题层级（是否从 h1 开始，是否跳级）
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>6. 表格语法（分隔行、对齐语法是否正确）
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>7. 列表缩进（有序/无序列表嵌套缩进是否一致）
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>8. 特殊字符转义（需要转义的字符是否处理）
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>输出格式：
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>| 文件/位置 | 问题类型 | 问题描述 | 修正建议 |
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>约束：重点关注会导致 --strict 构建失败或渲染错乱的问题；区分&quot;必须修复&quot;和&quot;建议优化&quot;。
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>质量标准：修正后文档可通过 mkdocs build --strict，渲染正常。
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>常见失败情况：代码块未闭合导致后续内容全部被吞；内部链接指向不存在的文件导致 --strict 失败；图片路径错误导致图裂。
+</code></pre></div>
+<h5 id="c_4">C. 自查审稿版<a class="headerlink" href="#c_4" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>请检查以下 Markdown 检查结果是否存在以下问题：
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>1. 是否检查了代码块闭合（最易导致渲染错乱）？
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>2. 是否检查了内部链接指向的文件是否存在（--strict 会因此失败）？
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>3. 是否区分了&quot;必须修复&quot;和&quot;建议优化&quot;？
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>4. 修正建议是否具体到位置？
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>【粘贴 Markdown 检查结果】
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_4">D. 返修优化版<a class="headerlink" href="#d_4" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>根据自查意见完善 Markdown 检查。补充代码块闭合和内部链接检查，区分问题严重度，明确修正位置。
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>原始检查结果：【粘贴原始结果】
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="55">5.5 交付给下游节点<a class="headerlink" href="#55" title="Permanent link">&para;</a></h4>
+<p>将 Markdown 问题清单（修正后）复制，交给节点 6（GitHub Actions 部署专家）。文档质量达标后再配置自动部署。</p>
+<h4 id="56">5.6 人工验收清单<a class="headerlink" href="#56" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] 是否检查了代码块闭合？</li>
+<li>[ ] 是否检查了内部链接指向的文件存在性？</li>
+<li>[ ] 是否区分了必须修复和建议优化？</li>
+</ul>
+<hr />
+<h3 id="6github-actions">节点 6：GitHub Actions 部署专家<a class="headerlink" href="#6github-actions" title="Permanent link">&para;</a></h3>
+<h4 id="61">6.1 节点定位<a class="headerlink" href="#61" title="Permanent link">&para;</a></h4>
+<p>生成 GitHub Actions 自动部署配置，实现推送即自动构建和发布到 GitHub Pages。自动部署免去每次手动构建上传的麻烦。</p>
+<h4 id="62">6.2 输入与输出<a class="headerlink" href="#62" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：节点 2 requirements.txt + 部署需求</p>
+<p><strong>输出</strong>：.github/workflows/deploy.yml + 权限说明</p>
+<h4 id="63">6.3 使用顺序<a class="headerlink" href="#63" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」生成部署配置。</li>
+<li>需要特定部署方式或缓存优化时，改用「专家增强版」。</li>
+<li>用「自查审稿版」检查 YAML 正确性、权限配置。</li>
+<li>有问题则用「返修优化版」修正。</li>
+<li>对照 6.6 验收清单确认，通过后交给节点 7。</li>
+</ol>
+<h4 id="64">6.4 提示词包<a class="headerlink" href="#64" title="Permanent link">&para;</a></h4>
+<h5 id="a_5">A. 快速生成版<a class="headerlink" href="#a_5" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>你是一位 GitHub Actions 配置助手。请生成 MkDocs 部署到 GitHub Pages 的 workflow。
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>requirements.txt：【粘贴节点2】
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>触发分支：【填入 main 等】
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>输出 .github/workflows/deploy.yml：
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>- 触发：push 到主分支 + 手动触发
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>- 步骤：checkout → setup-python → 安装依赖 → mkdocs build --strict → 部署到 Pages
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>- 包含必要权限（pages: write, id-token: write）
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>注意 YAML 缩进正确。
+</code></pre></div>
+<h5 id="b_5">B. 专家增强版<a class="headerlink" href="#b_5" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>你是一位 GitHub Actions 与 MkDocs 部署专家。
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>任务：生成可靠的 GitHub Pages 自动部署 workflow。
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>输入：
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>- requirements.txt：【粘贴节点2】
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>- 触发分支：【填入主分支名】
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>- Python 版本偏好：【填入或用默认】
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>workflow 内容：
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>1. 触发条件（push 到主分支 + workflow_dispatch 手动触发）
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>2. 权限设置（pages: write, id-token: write, contents: read）
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>3. 构建 job：
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>   - actions/checkout
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>   - actions/setup-python（指定版本）
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>   - pip install -r requirements.txt
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>   - mkdocs build --strict（strict 模式确保问题暴露）
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>   - actions/upload-pages-artifact
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>4. 部署 job：
+<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a>   - actions/deploy-pages
+<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a>   - environment: github-pages
+<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>
+<a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a>输出格式：
+<a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a>- 完整 deploy.yml（代码块，正确缩进）
+<a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a>- 权限说明（每个权限的作用）
+<a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a>- 使用前提（需在 Pages 设置中将 Source 设为 GitHub Actions —— 由节点7处理）
+<a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a>
+<a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a>约束：
+<a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a>- YAML 缩进规范（2 空格）
+<a id="__codelineno-22-30" name="__codelineno-22-30" href="#__codelineno-22-30"></a>- 使用 mkdocs build --strict（不是普通 build）
+<a id="__codelineno-22-31" name="__codelineno-22-31" href="#__codelineno-22-31"></a>- 权限遵循最小必要原则
+<a id="__codelineno-22-32" name="__codelineno-22-32" href="#__codelineno-22-32"></a>- 使用稳定版本的 actions
+<a id="__codelineno-22-33" name="__codelineno-22-33" href="#__codelineno-22-33"></a>
+<a id="__codelineno-22-34" name="__codelineno-22-34" href="#__codelineno-22-34"></a>质量标准：配置正确，推送后能自动构建并部署，构建失败时能在 Actions 日志看到原因。
+<a id="__codelineno-22-35" name="__codelineno-22-35" href="#__codelineno-22-35"></a>
+<a id="__codelineno-22-36" name="__codelineno-22-36" href="#__codelineno-22-36"></a>常见失败情况：缺少 pages 写权限导致部署失败；用了普通 build 而非 --strict 导致问题被掩盖；YAML 缩进错误导致 workflow 无效。
+</code></pre></div>
+<h5 id="c_5">C. 自查审稿版<a class="headerlink" href="#c_5" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>请检查以下部署 workflow 是否存在以下问题：
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>1. 是否包含 Pages 部署所需权限（pages: write, id-token: write）？
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>2. 构建是否用了 mkdocs build --strict（而非普通 build）？
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>3. YAML 缩进是否正确？
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>4. 是否包含手动触发（workflow_dispatch）？
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>【粘贴 deploy.yml】
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_5">D. 返修优化版<a class="headerlink" href="#d_5" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>根据自查意见修正部署配置。补充 Pages 权限，改用 --strict 构建，修正 YAML 缩进，添加手动触发。
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>原始配置：【粘贴原始 deploy.yml】
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="65">6.5 交付给下游节点<a class="headerlink" href="#65" title="Permanent link">&para;</a></h4>
+<p>将 deploy.yml 复制，交给节点 7（GitHub Pages 配置专家）。deploy.yml 需配合 Pages 的 Source 设置才能生效。</p>
+<h4 id="66">6.6 人工验收清单<a class="headerlink" href="#66" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] 是否包含 Pages 部署权限？</li>
+<li>[ ] 是否用了 mkdocs build --strict？</li>
+<li>[ ] YAML 缩进是否正确？</li>
+<li>[ ] 是否包含手动触发？</li>
+</ul>
+<hr />
+<h3 id="7github-pages">节点 7：GitHub Pages 配置专家<a class="headerlink" href="#7github-pages" title="Permanent link">&para;</a></h3>
+<h4 id="71">7.1 节点定位<a class="headerlink" href="#71" title="Permanent link">&para;</a></h4>
+<p>提供 GitHub Pages 的设置步骤，将 Source 配置为 GitHub Actions。这一步常被遗漏，导致 Actions 构建成功但 Pages 仍是 404。</p>
+<h4 id="72">7.2 输入与输出<a class="headerlink" href="#72" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：节点 6 deploy.yml + 仓库 URL</p>
+<p><strong>输出</strong>：GitHub Pages 设置步骤 + 验证方法</p>
+<h4 id="73">7.3 使用顺序<a class="headerlink" href="#73" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」得到 Pages 设置步骤。</li>
+<li>涉及自定义域名或特殊配置时，改用「专家增强版」。</li>
+<li>用「自查审稿版」检查步骤是否完整。</li>
+<li>有问题则用「返修优化版」补充。</li>
+<li>对照 7.6 验收清单确认，通过后交给节点 8。</li>
+</ol>
+<h4 id="74">7.4 提示词包<a class="headerlink" href="#74" title="Permanent link">&para;</a></h4>
+<h5 id="a_6">A. 快速生成版<a class="headerlink" href="#a_6" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>你是一位 GitHub Pages 配置向导。请说明如何设置 Pages 使用 Actions 部署。
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>仓库：【填入用户名/仓库名】
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>输出：
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>1. Pages 设置步骤（Settings → Pages → Source 选 GitHub Actions）
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>2. 站点访问地址（https://用户名.github.io/仓库名/）
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>3. 首次部署后的验证方法
+</code></pre></div>
+<h5 id="b_6">B. 专家增强版<a class="headerlink" href="#b_6" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>你是一位 GitHub Pages 部署专家。
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>任务：提供完整的 GitHub Pages 设置步骤，确保 Actions 部署生效。
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>输入：
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>- deploy.yml：【确认已就位】
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>- 仓库 URL：【填入】
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>步骤：
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>1. 进入仓库 Settings → Pages
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>2. Build and deployment → Source → 选择 &quot;GitHub Actions&quot;（不是 &quot;Deploy from a branch&quot;）
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>3. 推送代码触发 Actions，或在 Actions 页面手动运行 workflow
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>4. 等待 Actions 完成（构建 + 部署两个 job 都成功）
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>5. 访问站点地址确认：https://&lt;用户名&gt;.github.io/&lt;仓库名&gt;/
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a>
+<a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a>验证与排查：
+<a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a>- 若 Actions 成功但 Pages 404：检查 Source 是否设为 GitHub Actions
+<a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a>- 若 Actions 失败：查看日志（多为构建错误，转节点8处理）
+<a id="__codelineno-26-19" name="__codelineno-26-19" href="#__codelineno-26-19"></a>- 若页面样式丢失：检查 mkdocs.yml 的 site_url 是否正确
+<a id="__codelineno-26-20" name="__codelineno-26-20" href="#__codelineno-26-20"></a>
+<a id="__codelineno-26-21" name="__codelineno-26-21" href="#__codelineno-26-21"></a>输出格式：
+<a id="__codelineno-26-22" name="__codelineno-26-22" href="#__codelineno-26-22"></a>- 设置步骤（带界面路径）
+<a id="__codelineno-26-23" name="__codelineno-26-23" href="#__codelineno-26-23"></a>- 站点访问地址
+<a id="__codelineno-26-24" name="__codelineno-26-24" href="#__codelineno-26-24"></a>- 常见问题排查表
+<a id="__codelineno-26-25" name="__codelineno-26-25" href="#__codelineno-26-25"></a>
+<a id="__codelineno-26-26" name="__codelineno-26-26" href="#__codelineno-26-26"></a>约束：明确 Source 必须选 &quot;GitHub Actions&quot;；站点地址用实际用户名/仓库名；区分 Actions 失败和 Pages 配置问题。
+<a id="__codelineno-26-27" name="__codelineno-26-27" href="#__codelineno-26-27"></a>
+<a id="__codelineno-26-28" name="__codelineno-26-28" href="#__codelineno-26-28"></a>质量标准：按步骤操作后站点可访问；遇到问题能定位是配置还是构建问题。
+<a id="__codelineno-26-29" name="__codelineno-26-29" href="#__codelineno-26-29"></a>
+<a id="__codelineno-26-30" name="__codelineno-26-30" href="#__codelineno-26-30"></a>常见失败情况：Source 仍是 &quot;Deploy from a branch&quot; 导致 Actions 部署不生效；site_url 错误导致 CSS/JS 加载失败页面无样式。
+</code></pre></div>
+<h5 id="c_6">C. 自查审稿版<a class="headerlink" href="#c_6" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>请检查以下 Pages 设置步骤是否存在以下问题：
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>1. 是否明确说明 Source 要选 &quot;GitHub Actions&quot;（而非 Deploy from a branch）？
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>2. 站点访问地址格式是否正确？
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>3. 是否包含&quot;Actions 成功但 Pages 404&quot;的排查（最常见问题）？
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>【粘贴 Pages 设置步骤】
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_6">D. 返修优化版<a class="headerlink" href="#d_6" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>根据自查意见完善 Pages 设置步骤。强调 Source 选 GitHub Actions，修正站点地址格式，补充 404 排查。
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>原始步骤：【粘贴原始步骤】
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="75">7.5 交付给下游节点<a class="headerlink" href="#75" title="Permanent link">&para;</a></h4>
+<p>将 Pages 设置步骤复制，交给节点 8（构建错误修复专家）。若部署遇到构建错误，由节点 8 处理。</p>
+<h4 id="76">7.6 人工验收清单<a class="headerlink" href="#76" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] 是否明确 Source 要选 GitHub Actions？</li>
+<li>[ ] 站点地址格式是否正确？</li>
+<li>[ ] 是否包含 Pages 404 的排查？</li>
+</ul>
+<hr />
+<h3 id="8">节点 8：构建错误修复专家（招牌节点）<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<h4 id="81">8.1 节点定位<a class="headerlink" href="#81" title="Permanent link">&para;</a></h4>
+<p><strong>这是本工作流的招牌节点。</strong> 系统性诊断和修复 MkDocs 构建与发布中的各类错误。本节点覆盖以下高频错误，并提供基于真实命令的定位方法：</p>
+<table>
+<thead>
+<tr>
+<th>错误类型</th>
+<th>典型表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nav 引用不存在的文件</td>
+<td><code>--strict</code> 报 "is included in nav but not found"</td>
+</tr>
+<tr>
+<td>requirements.txt 依赖缺失</td>
+<td>构建报 "module not found" / 插件未安装</td>
+</tr>
+<tr>
+<td>YAML 缩进错误</td>
+<td>配置解析失败 / workflow 不触发</td>
+</tr>
+<tr>
+<td>Markdown 代码块未闭合</td>
+<td>渲染错乱 / 后续内容被吞</td>
+</tr>
+<tr>
+<td>GitHub Pages Source 配置错误</td>
+<td>Actions 成功但页面 404</td>
+</tr>
+<tr>
+<td>Actions 权限不足</td>
+<td>部署 job 报权限错误</td>
+</tr>
+<tr>
+<td>site_url / repo_url 配置错误</td>
+<td>页面无样式 / 链接错误</td>
+</tr>
+<tr>
+<td>mkdocs build --strict 报错</td>
+<td>各类警告在 strict 下变为错误</td>
+</tr>
+</tbody>
+</table>
+<h4 id="82">8.2 输入与输出<a class="headerlink" href="#82" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：构建错误信息（本地或 Actions 日志）+ 相关配置文件</p>
+<p><strong>输出</strong>：错误诊断（错误类型 + 根因 + 定位命令）+ 修复方案</p>
+<h4 id="83">8.3 使用顺序<a class="headerlink" href="#83" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」诊断常见错误。</li>
+<li>错误复杂或多个错误叠加时，使用「专家增强版」。</li>
+<li>用「自查审稿版」确认修复是否对症。</li>
+<li>有问题则用「返修优化版」修正。</li>
+<li>对照 8.6 验收清单确认，通过后交给节点 9。</li>
+</ol>
+<h4 id="84">8.4 提示词包<a class="headerlink" href="#84" title="Permanent link">&para;</a></h4>
+<h5 id="a_7">A. 快速生成版<a class="headerlink" href="#a_7" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>你是一位 MkDocs 构建排错助手。请诊断以下构建错误。
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>错误信息：【粘贴报错（本地或 Actions 日志）】
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>相关配置：【粘贴 mkdocs.yml / requirements.txt 相关部分】
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>输出：
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>1. 错误类型
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>2. 根因
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>3. 修复方法
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>4. 验证命令（如 mkdocs build --strict）
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>常见错误参考：nav 引用不存在文件、依赖缺失、YAML 缩进、代码块未闭合、Pages Source 配置、权限不足、site_url 错误。
+</code></pre></div>
+<h5 id="b_7">B. 专家增强版<a class="headerlink" href="#b_7" title="Permanent link">&para;</a></h5>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>你是一位 MkDocs 与 GitHub Pages 部署排错专家。
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>任务：系统诊断构建/部署错误，给出根因和可执行的修复方案。
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>输入：
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>- 错误信息：【粘贴完整报错或 Actions 日志】
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>- 相关配置：【粘贴 mkdocs.yml / requirements.txt / deploy.yml】
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>- 错误发生阶段：【本地 build / Actions 构建 / Pages 访问】
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>诊断流程（按错误类型）：
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>1. nav 引用不存在的文件
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>   - 表现：`The following pages exist in the docs directory, but are not included in the &quot;nav&quot;` 或 nav 引用的文件 not found
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>   - 定位：核对 nav 中路径与 docs/ 实际文件
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>   - 修复：移除或修正错误路径 / 创建缺失文件
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>
+<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a>2. requirements.txt 依赖缺失
+<a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a>   - 表现：构建报 plugin/module not found
+<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a>   - 定位：对比 mkdocs.yml 用到的插件与 requirements.txt
+<a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a>   - 修复：补充缺失依赖
+<a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a>
+<a id="__codelineno-30-22" name="__codelineno-30-22" href="#__codelineno-30-22"></a>3. YAML 缩进错误
+<a id="__codelineno-30-23" name="__codelineno-30-23" href="#__codelineno-30-23"></a>   - 表现：config 解析失败 / workflow 不触发
+<a id="__codelineno-30-24" name="__codelineno-30-24" href="#__codelineno-30-24"></a>   - 定位：检查缩进是否用了 Tab、层级是否对齐
+<a id="__codelineno-30-25" name="__codelineno-30-25" href="#__codelineno-30-25"></a>   - 修复：统一为 2 空格缩进
+<a id="__codelineno-30-26" name="__codelineno-30-26" href="#__codelineno-30-26"></a>
+<a id="__codelineno-30-27" name="__codelineno-30-27" href="#__codelineno-30-27"></a>4. Markdown 代码块未闭合
+<a id="__codelineno-30-28" name="__codelineno-30-28" href="#__codelineno-30-28"></a>   - 表现：渲染错乱、后续内容被当作代码
+<a id="__codelineno-30-29" name="__codelineno-30-29" href="#__codelineno-30-29"></a>   - 定位：搜索单数个 ``` 的文件
+<a id="__codelineno-30-30" name="__codelineno-30-30" href="#__codelineno-30-30"></a>   - 修复：补齐闭合标记
+<a id="__codelineno-30-31" name="__codelineno-30-31" href="#__codelineno-30-31"></a>
+<a id="__codelineno-30-32" name="__codelineno-30-32" href="#__codelineno-30-32"></a>5. Pages Source 配置错误
+<a id="__codelineno-30-33" name="__codelineno-30-33" href="#__codelineno-30-33"></a>   - 表现：Actions 成功但访问 404
+<a id="__codelineno-30-34" name="__codelineno-30-34" href="#__codelineno-30-34"></a>   - 修复：Settings → Pages → Source 设为 GitHub Actions
+<a id="__codelineno-30-35" name="__codelineno-30-35" href="#__codelineno-30-35"></a>
+<a id="__codelineno-30-36" name="__codelineno-30-36" href="#__codelineno-30-36"></a>6. Actions 权限不足
+<a id="__codelineno-30-37" name="__codelineno-30-37" href="#__codelineno-30-37"></a>   - 表现：部署 job 报 permission denied
+<a id="__codelineno-30-38" name="__codelineno-30-38" href="#__codelineno-30-38"></a>   - 修复：在 workflow 中补充 pages: write, id-token: write
+<a id="__codelineno-30-39" name="__codelineno-30-39" href="#__codelineno-30-39"></a>
+<a id="__codelineno-30-40" name="__codelineno-30-40" href="#__codelineno-30-40"></a>7. site_url / repo_url 错误
+<a id="__codelineno-30-41" name="__codelineno-30-41" href="#__codelineno-30-41"></a>   - 表现：页面无样式、链接 404
+<a id="__codelineno-30-42" name="__codelineno-30-42" href="#__codelineno-30-42"></a>   - 修复：site_url 设为 https://&lt;用户名&gt;.github.io/&lt;仓库名&gt;/
+<a id="__codelineno-30-43" name="__codelineno-30-43" href="#__codelineno-30-43"></a>
+<a id="__codelineno-30-44" name="__codelineno-30-44" href="#__codelineno-30-44"></a>定位常用命令（提醒按实际替换）：
+</code></pre></div>
+pip install -r requirements.txt    # 确认依赖可安装
+mkdocs serve                       # 本地预览，实时看错误
+mkdocs build --strict              # 严格构建，暴露所有问题
+git status                         # 查看改动和未跟踪文件
+git add .
+git commit -m "fix: 修复构建错误"
+git push
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>输出格式：
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>- 错误类型判定
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>- 根因分析
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>- 修复步骤（具体到改哪个文件哪一行）
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>- 验证命令
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>- 修复后预期结果
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>约束：每个错误必须给出根因而非只说&quot;配置错了&quot;；修复步骤可执行；提供验证命令确认修复有效。
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>质量标准：用户按修复方案操作后，mkdocs build --strict 通过、Pages 正常访问。
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>常见失败情况：只说&quot;检查配置&quot;不定位具体问题；修复一个错误引入另一个；不提供验证手段。
+</code></pre></div></p>
+<h5 id="c_7">C. 自查审稿版<a class="headerlink" href="#c_7" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>请检查以下构建错误修复方案是否存在以下问题：
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>1. 是否定位到了具体根因（而非笼统的&quot;配置有误&quot;）？
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>2. 修复步骤是否具体到文件和位置？
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>3. 是否提供了验证命令（mkdocs build --strict 等）确认修复有效？
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>4. 修复是否可能引入新问题？
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>【粘贴构建错误修复方案】
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_7">D. 返修优化版<a class="headerlink" href="#d_7" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>根据自查意见完善修复方案。明确根因，将修复步骤具体到文件位置，补充验证命令，排查修复引入新问题的可能。
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>原始方案：【粘贴原始方案】
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="85">8.5 交付给下游节点<a class="headerlink" href="#85" title="Permanent link">&para;</a></h4>
+<p>将错误修复方案应用后，将通过构建的配置交给节点 9（发布验收专家）。</p>
+<h4 id="86">8.6 人工验收清单<a class="headerlink" href="#86" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] 是否定位到了具体错误根因？</li>
+<li>[ ] 修复步骤是否具体到文件和位置？</li>
+<li>[ ] 是否提供了验证命令？</li>
+<li>[ ] 修复后 mkdocs build --strict 是否通过？</li>
+</ul>
+<hr />
+<h3 id="9">节点 9：发布验收专家<a class="headerlink" href="#9" title="Permanent link">&para;</a></h3>
+<h4 id="91">9.1 节点定位<a class="headerlink" href="#91" title="Permanent link">&para;</a></h4>
+<p>对发布的文档站点进行最终验收，确认站点可访问、内容完整、功能正常。验收是发布闭环的最后一步。</p>
+<h4 id="92">9.2 输入与输出<a class="headerlink" href="#92" title="Permanent link">&para;</a></h4>
+<p><strong>输入</strong>：站点 URL + 全部前序产出</p>
+<p><strong>输出</strong>：发布验收清单结果 + 遗留问题</p>
+<h4 id="93">9.3 使用顺序<a class="headerlink" href="#93" title="Permanent link">&para;</a></h4>
+<ol>
+<li>先用「快速生成版」做发布验收。</li>
+<li>正式发布需要全面验收时，改用「专家增强版」。</li>
+<li>用「自查审稿版」确认验收无遗漏。</li>
+<li>有遗留问题则返回对应节点处理。</li>
+<li>对照 9.6 验收清单确认。</li>
+</ol>
+<h4 id="94">9.4 提示词包<a class="headerlink" href="#94" title="Permanent link">&para;</a></h4>
+<h5 id="a_8">A. 快速生成版<a class="headerlink" href="#a_8" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>你是一位站点发布验收员。请提供 MkDocs 站点发布验收清单。
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>站点 URL：【填入】
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>验收清单：
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>- [ ] 站点可访问（非 404）
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>- [ ] 首页正常显示
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>- [ ] 导航链接都能打开
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>- [ ] 样式正常（非纯文本）
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>- [ ] 搜索功能可用
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>- [ ] 代码块渲染正常
+</code></pre></div>
+<h5 id="b_8">B. 专家增强版<a class="headerlink" href="#b_8" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>你是一位文档站点发布验收专家。
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>任务：对发布的 MkDocs 站点进行全面验收。
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>输入：
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>- 站点 URL：【填入】
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>- 文档结构：【粘贴节点1】
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>验收维度：
+<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>1. 可访问性（站点能打开，非 404）
+<a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>2. 首页（index.md 内容正常显示）
+<a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a>3. 导航完整性（nav 所有链接可打开，无死链）
+<a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a>4. 样式渲染（Material 主题样式加载正常，非纯文本 —— 若无样式多为 site_url 错误）
+<a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a>5. 内容渲染（代码块高亮、表格、admonition 等渲染正常）
+<a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a>6. 功能性（搜索可用、明暗切换可用、代码复制按钮可用）
+<a id="__codelineno-35-16" name="__codelineno-35-16" href="#__codelineno-35-16"></a>7. 移动端（在窄屏下布局正常）
+<a id="__codelineno-35-17" name="__codelineno-35-17" href="#__codelineno-35-17"></a>8. 构建状态（最近一次 Actions 构建成功）
+<a id="__codelineno-35-18" name="__codelineno-35-18" href="#__codelineno-35-18"></a>
+<a id="__codelineno-35-19" name="__codelineno-35-19" href="#__codelineno-35-19"></a>输出格式：
+<a id="__codelineno-35-20" name="__codelineno-35-20" href="#__codelineno-35-20"></a>- 验收清单（逐项可勾选 + 状态）
+<a id="__codelineno-35-21" name="__codelineno-35-21" href="#__codelineno-35-21"></a>- 遗留问题清单（问题 | 对应处理节点）
+<a id="__codelineno-35-22" name="__codelineno-35-22" href="#__codelineno-35-22"></a>- 总体结论（可发布 / 需修复）
+<a id="__codelineno-35-23" name="__codelineno-35-23" href="#__codelineno-35-23"></a>
+<a id="__codelineno-35-24" name="__codelineno-35-24" href="#__codelineno-35-24"></a>约束：验收必须实际访问站点确认，不能仅看配置；样式异常优先怀疑 site_url。
+<a id="__codelineno-35-25" name="__codelineno-35-25" href="#__codelineno-35-25"></a>
+<a id="__codelineno-35-26" name="__codelineno-35-26" href="#__codelineno-35-26"></a>质量标准：通过验收的站点对访问者完全可用，无死链、无样式问题。
+<a id="__codelineno-35-27" name="__codelineno-35-27" href="#__codelineno-35-27"></a>
+<a id="__codelineno-35-28" name="__codelineno-35-28" href="#__codelineno-35-28"></a>常见失败情况：站点能开但无样式（site_url 错）；部分导航链接 404（nav 路径错）；只在桌面端测没测移动端。
+</code></pre></div>
+<h5 id="c_8">C. 自查审稿版<a class="headerlink" href="#c_8" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此为当前节点的自查模式，不是新的专家角色。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>请检查以下发布验收清单是否存在以下问题：
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>1. 是否包含样式渲染检查（site_url 错误的典型表现）？
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>2. 是否检查了所有导航链接的有效性？
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>3. 是否包含移动端检查？
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>4. 遗留问题是否标注了对应的处理节点？
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>【粘贴发布验收清单】
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>逐条说明问题。
+</code></pre></div>
+<h5 id="d_8">D. 返修优化版<a class="headerlink" href="#d_8" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>根据自查意见完善发布验收清单。补充样式和导航链接检查，增加移动端验收，为遗留问题标注处理节点。
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>原始清单：【粘贴原始清单】
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>自查意见：【粘贴自查结果】
+</code></pre></div>
+<h4 id="95">9.5 交付给下游节点<a class="headerlink" href="#95" title="Permanent link">&para;</a></h4>
+<p>本节点是工作流终点。验收通过后，文档站点正式发布。存在遗留问题时返回对应节点处理（多数构建问题回节点 8）。</p>
+<h4 id="96">9.6 人工验收清单<a class="headerlink" href="#96" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] 站点是否可访问（非 404）？</li>
+<li>[ ] 样式是否正常加载（非纯文本）？</li>
+<li>[ ] 所有导航链接是否可打开？</li>
+<li>[ ] 搜索、代码块等功能是否正常？</li>
+</ul>
+<hr />
+<h2 id="_4">节点交接说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>上游节点</th>
+<th>交接内容</th>
+<th>下游节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>节点 1 结构规划</td>
+<td>docs/ 目录结构</td>
+<td>节点 2、节点 4</td>
+</tr>
+<tr>
+<td>节点 2 MkDocs 配置</td>
+<td>mkdocs.yml 基础 + requirements.txt</td>
+<td>节点 3</td>
+</tr>
+<tr>
+<td>节点 3 Material 主题</td>
+<td>theme 配置 + 依赖更新</td>
+<td>节点 4</td>
+</tr>
+<tr>
+<td>节点 4 导航结构</td>
+<td>nav 配置（完整 mkdocs.yml）</td>
+<td>节点 5</td>
+</tr>
+<tr>
+<td>节点 5 Markdown 检查</td>
+<td>文档问题清单 + 修正</td>
+<td>节点 6</td>
+</tr>
+<tr>
+<td>节点 6 Actions 部署</td>
+<td>deploy.yml</td>
+<td>节点 7</td>
+</tr>
+<tr>
+<td>节点 7 Pages 配置</td>
+<td>Pages 设置步骤</td>
+<td>节点 8</td>
+</tr>
+<tr>
+<td>节点 8 构建错误修复</td>
+<td>错误诊断 + 修复（通过构建的配置）</td>
+<td>节点 9</td>
+</tr>
+<tr>
+<td>节点 9 发布验收</td>
+<td>验收清单结果</td>
+<td>最终输出模板</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">最终输出模板<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>【站点名】MkDocs 发布包
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>━━ 站点信息 ━━
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>站点名：【填入】
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>站点地址：https://&lt;用户名&gt;.github.io/&lt;仓库名&gt;/
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>文档数量：【填入】
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>━━ 配置文件清单 ━━
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>- mkdocs.yml（site + theme + nav）
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>- requirements.txt
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>- .github/workflows/deploy.yml
+<a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>- docs/（文档目录）
+<a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>
+<a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>━━ 发布步骤 ━━
+<a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a>1. 确认 mkdocs build --strict 本地通过
+<a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a>2. 推送代码到主分支
+<a id="__codelineno-38-17" name="__codelineno-38-17" href="#__codelineno-38-17"></a>3. Settings → Pages → Source 设为 GitHub Actions
+<a id="__codelineno-38-18" name="__codelineno-38-18" href="#__codelineno-38-18"></a>4. 等待 Actions 完成（构建 + 部署）
+<a id="__codelineno-38-19" name="__codelineno-38-19" href="#__codelineno-38-19"></a>5. 访问站点地址验收
+<a id="__codelineno-38-20" name="__codelineno-38-20" href="#__codelineno-38-20"></a>
+<a id="__codelineno-38-21" name="__codelineno-38-21" href="#__codelineno-38-21"></a>━━ 本地验证命令 ━━
+<a id="__codelineno-38-22" name="__codelineno-38-22" href="#__codelineno-38-22"></a>pip install -r requirements.txt
+<a id="__codelineno-38-23" name="__codelineno-38-23" href="#__codelineno-38-23"></a>mkdocs serve              # 本地预览
+<a id="__codelineno-38-24" name="__codelineno-38-24" href="#__codelineno-38-24"></a>mkdocs build --strict     # 严格构建检查
+<a id="__codelineno-38-25" name="__codelineno-38-25" href="#__codelineno-38-25"></a>
+<a id="__codelineno-38-26" name="__codelineno-38-26" href="#__codelineno-38-26"></a>━━ 发布验收 ━━
+<a id="__codelineno-38-27" name="__codelineno-38-27" href="#__codelineno-38-27"></a>- [ ] 站点可访问
+<a id="__codelineno-38-28" name="__codelineno-38-28" href="#__codelineno-38-28"></a>- [ ] 样式正常
+<a id="__codelineno-38-29" name="__codelineno-38-29" href="#__codelineno-38-29"></a>- [ ] 导航无死链
+<a id="__codelineno-38-30" name="__codelineno-38-30" href="#__codelineno-38-30"></a>- [ ] 功能正常
+<a id="__codelineno-38-31" name="__codelineno-38-31" href="#__codelineno-38-31"></a>- [ ] Actions 构建成功
+</code></pre></div>
+<hr />
+<h2 id="_6">常见错误<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>错误 1：nav 引用了不存在的文件</strong></p>
+<p>表现：<code>mkdocs build --strict</code> 报错 "nav 中引用的文件未找到"，构建失败。</p>
+<p>修复：执行节点 8（招牌节点）的 nav 诊断，逐一核对 nav 路径与 docs/ 实际文件，移除或修正错误引用、或创建缺失文件。</p>
+<p><strong>错误 2：Actions 构建成功但 Pages 显示 404</strong></p>
+<p>表现：GitHub Actions 全绿，但访问站点地址是 404。</p>
+<p>修复：执行节点 7，确认 Settings → Pages → Source 设为 "GitHub Actions"（而非 "Deploy from a branch"）。这是最易遗漏的一步。</p>
+<p><strong>错误 3：页面能打开但完全没有样式</strong></p>
+<p>表现：站点是纯文本，Material 主题样式全部丢失。</p>
+<p>修复：执行节点 8 的 site_url 诊断，确认 mkdocs.yml 的 site_url 是正确的 <code>https://&lt;用户名&gt;.github.io/&lt;仓库名&gt;/</code> 格式。site_url 错误会导致 CSS/JS 加载路径错误。</p>
+<hr />
+<h2 id="_7">人工验收清单<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] mkdocs.yml 配置是否正确（缩进/site_url/依赖完整）？</li>
+<li>[ ] nav 引用的所有文件是否都存在？</li>
+<li>[ ] <code>mkdocs build --strict</code> 是否本地通过？</li>
+<li>[ ] GitHub Pages Source 是否设为 GitHub Actions？</li>
+<li>[ ] 站点是否可访问且样式、导航、功能都正常？</li>
+</ul>
+<hr />
+<h2 id="_8">延伸玩法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>变体 1：本地预览优先版</strong>：跳过部署节点（6/7），只走节点 1-5 + 节点 8，用 <code>mkdocs serve</code> 在本地完成文档站点，适合内部文档或尚未公开的项目。</li>
+<li><strong>变体 2：已有站点维护版</strong>：对已发布的 MkDocs 站点新增文档，重点走节点 4（更新 nav）→ 节点 5（检查新文档）→ 节点 8（修复构建问题），跳过初始配置。</li>
+<li><strong>进阶组合</strong>：与"工作流 14（GitHub 发布工作流）"结合，代码仓库和文档站点一并发布；本图鉴项目本身即用此工作流发布，是工作流的实际应用范例。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

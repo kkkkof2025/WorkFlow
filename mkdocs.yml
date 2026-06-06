@@ -69,6 +69,12 @@ nav:
       - 音乐创作工作流: chapters/10-music-creation.md
   - 项目管理:
       - 需求到计划工作流: chapters/02-project-management.md
+  - 项目与工程:
+      - 程序员开发工作流: chapters/11-program-development.md
+      - 编程 Agent 协作工作流: chapters/12-agent-collaboration.md
+      - 安全审查工作流: chapters/13-security-review.md
+      - GitHub 发布工作流: chapters/14-github-publishing.md
+      - MkDocs 发布工作流: chapters/15-mkdocs-publishing.md
   - 工会宣传:
       - 活动宣传故事工作流: chapters/03-union-activity.md
   - Prompt 工程:
@@ -87,3 +93,4 @@ nav:
       - 第二阶段审查记录: guide/stage-2-review.md
       - 第三阶段批次A审查: guide/stage-3-batch-a-review.md
       - 第三阶段批次B审查: guide/stage-3-batch-b-review.md
+      - 第三阶段批次C审查: guide/stage-3-batch-c-review.md
