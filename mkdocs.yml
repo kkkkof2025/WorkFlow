@@ -75,6 +75,12 @@ nav:
       - 安全审查工作流: chapters/13-security-review.md
       - GitHub 发布工作流: chapters/14-github-publishing.md
       - MkDocs 发布工作流: chapters/15-mkdocs-publishing.md
+  - 办公效率:
+      - 会议纪要工作流: chapters/16-meeting-minutes.md
+      - 领导汇报工作流: chapters/17-leadership-reporting.md
+      - 数据分析报告工作流: chapters/18-data-analysis-report.md
+      - 群聊知识沉淀工作流: chapters/19-group-chat-knowledge.md
+      - 评论观点分析工作流: chapters/20-comment-opinion-analysis.md
   - 工会宣传:
       - 活动宣传故事工作流: chapters/03-union-activity.md
   - Prompt 工程:
@@ -94,3 +100,4 @@ nav:
       - 第三阶段批次A审查: guide/stage-3-batch-a-review.md
       - 第三阶段批次B审查: guide/stage-3-batch-b-review.md
       - 第三阶段批次C审查: guide/stage-3-batch-c-review.md
+      - 第三阶段批次D审查: guide/stage-3-batch-d-review.md
