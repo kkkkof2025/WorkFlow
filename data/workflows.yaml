@@ -396,82 +396,98 @@ workflows:
     chapter: 26-legal-review
     priority: P2
 
-  # 第七章：知识管理
+  # 第七章：教育学习与知识管理
   - id: "26"
-    name: 从活动素材到有温度宣传故事的工会宣传工作流
-    category: 知识管理
-    role: 工会干部、宣传员、企业文化岗
-    scene: 活动结束后，需要把素材整理成有故事感的宣传内容
-    output: 新闻稿 + 短视频脚本 + 标题金句 + 宣传总结
+    name: 从教学主题到完整课堂设计的 AI 多专家备课工作流
+    category: 教育学习
+    role: 教师、培训讲师、课程设计师、企业内训人员
+    scene: 需要为一个教学主题准备完整的课堂设计，从目标拆解到教案生成
+    output: 完整教案 + 课堂活动 + 练习题 + 板书框架 + 课堂风险清单
     nodes:
-      - 活动素材整理专家
-      - 人物故事挖掘专家
-      - 情绪主线设计专家
-      - 新闻稿生成专家
-      - 短视频脚本专家
-      - 标题与金句专家
-      - 真实性审查专家
-      - 宣传复盘专家
-    chapter: 03-union-activity
-    priority: P0
-
-  - id: "27"
-    name: 从文章笔记到个人知识库的整理工作流
-    category: 知识管理
-    role: 知识工作者、研究员、学习者
-    scene: 积累了大量文章、笔记和链接，需要整理成可复用的知识库
-    output: 知识卡片 + 主题归类 + 行动清单
-    nodes:
-      - 内容过滤专家
-      - 主题归类专家
-      - 知识卡片专家
-      - 行动提取专家
-      - 索引生成专家
-    chapter: 27-personal-knowledge
-    priority: P2
-
-  - id: "28"
-    name: 从工作记录到月度复盘的 AI 个人复盘工作流
-    category: 知识管理
-    role: 职场人、创业者、自由职业者
-    scene: 月底需要做个人复盘，手头只有零散的工作记录
-    output: 复盘报告（成果、问题、根因、改进计划）
-    nodes:
-      - 事件梳理专家
-      - 成果盘点专家
-      - 问题识别专家
-      - 根因分析专家
-      - 改进计划专家
-    chapter: 28-personal-review
-    priority: P2
-
-  # 第八章：开源与发布
-  - id: "29"
-    name: 从 Markdown 文档到 MkDocs 电子书的发布工作流
-    category: 开源发布
-    role: 技术写作者、开源开发者
-    scene: 有一批 Markdown 文档，需要配置 MkDocs 并发布为 GitHub Pages 电子书
-    output: mkdocs.yml + GitHub Actions 配置 + 首页 + 导航结构
-    nodes:
-      - 文档结构专家
-      - 导航设计专家
-      - mkdocs 配置专家
-      - GitHub Actions 专家
-      - 首页优化专家
-    chapter: 29-mkdocs-publish
+      - 教学目标拆解专家
+      - 学情分析专家
+      - 教学重难点专家
+      - 课堂结构设计专家
+      - 案例与活动设计专家
+      - 练习题生成专家
+      - 板书与课件大纲专家
+      - 课堂风险预判专家
+      - 教案生成专家
+    chapter: 26-teacher-lesson-prep
     priority: P1
 
-  - id: "30"
-    name: 从票据报销到财务规范化的 AI 财务管理工作流
-    category: 知识管理
-    role: 财务经理、创业者
-    scene: 需要建立一套可重复使用的财务报销和管理标准
-    output: 报销规范文档 + 审核清单 + 异常处理流程
+  - id: "27"
+    name: 从知识点到复习计划的 AI 多专家学习工作流
+    category: 教育学习
+    role: 学生、自学者、备考人员、知识学习者
+    scene: 有一个学习主题或考试科目，需要从目标澄清到复盘改进完成系统学习
+    output: 学习计划 + 错题分析报告 + 复习卡片 + 模拟测试题
     nodes:
-      - 规范梳理专家
-      - 流程设计专家
-      - 清单生成专家
-      - 异常处理专家
-      - 文档撰写专家
-    chapter: 30-financial-management
-    priority: P3
+      - 学习目标澄清专家
+      - 知识点拆解专家
+      - 先修知识检查专家
+      - 学习计划专家
+      - 错题分析专家
+      - 复习卡片专家
+      - 模拟测试专家
+      - 学习反馈专家
+      - 阶段复盘专家
+    chapter: 27-student-learning
+    priority: P1
+
+  - id: "28"
+    name: 从文章笔记到个人知识库的 AI 多专家整理工作流
+    category: 知识管理
+    role: 知识工作者、学生、研究人员、内容创作者、职场人
+    scene: 积累了大量文章、笔记和链接，需要整理成可复用的个人知识库
+    output: 知识卡片库 + 标签体系 + 关联关系图 + 行动清单
+    nodes:
+      - 材料清洗专家
+      - 主题识别专家
+      - 知识卡片生成专家
+      - 标签体系专家
+      - 关联关系专家
+      - 行动清单专家
+      - 复习提醒专家
+      - 知识库结构专家
+      - 更新维护专家
+    chapter: 28-personal-knowledge
+    priority: P2
+
+  - id: "29"
+    name: 从日记周报到成长复盘的 AI 多专家工作流
+    category: 知识管理
+    role: 职场人、自学者、项目负责人、学生、自由职业者
+    scene: 月底或阶段结束时，需要做有诊断性的个人复盘
+    output: 复盘报告（成果、问题模式、决策分析、下阶段行动计划）
+    nodes:
+      - 原始记录整理专家
+      - 事件分类专家
+      - 情绪变化识别专家
+      - 问题模式识别专家
+      - 成长证据提取专家
+      - 决策复盘专家
+      - 下阶段行动专家
+      - 风险提醒专家
+      - 复盘报告生成专家
+    chapter: 29-personal-review
+    priority: P2
+
+  - id: "30"
+    name: 从零散待办到可执行行动计划的 AI 多专家任务管理工作流
+    category: 知识管理
+    role: 职场人、学生、管理者、自由职业者、项目执行者
+    scene: 手头有大量零散待办，需要整理成有优先级的可执行行动计划
+    output: 任务看板 + 四象限清单 + 每日执行计划 + 阻塞点清单
+    nodes:
+      - 待办收集专家
+      - 任务分类专家
+      - 优先级判断专家
+      - 时间估算专家
+      - 阻塞点识别专家
+      - 执行计划专家
+      - 提醒与复盘专家
+      - 精力匹配专家
+      - 任务看板生成专家
+    chapter: 30-personal-task-management
+    priority: P2

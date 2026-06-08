@@ -41,14 +41,12 @@
 
 ## 批次 E 之后（批次 F）
 
-批次 F 待批次 E 完成后再启动：
-
-- [ ] 生成 docs/chapters/26-xx.md（待定）
-- [ ] 生成 docs/chapters/27-xx.md
-- [ ] 生成 docs/chapters/28-xx.md
-- [ ] 生成 docs/chapters/29-xx.md
-- [ ] 生成 docs/chapters/30-xx.md
-- [ ] 新增 docs/guide/stage-3-batch-f-review.md
+- [x] 生成 docs/chapters/26-teacher-lesson-prep.md ✅
+- [x] 生成 docs/chapters/27-student-learning.md ✅
+- [x] 生成 docs/chapters/28-personal-knowledge.md ✅
+- [x] 生成 docs/chapters/29-personal-review.md ✅
+- [x] 生成 docs/chapters/30-personal-task-management.md ✅
+- [x] 新增 docs/guide/stage-3-batch-f-review.md ✅
 
 ---
 

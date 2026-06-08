@@ -87,6 +87,12 @@ nav:
       - 客服沟通工作流: chapters/23-customer-service.md
       - 财务报销工作流: chapters/24-finance-reimbursement.md
       - 法务合同初审工作流: chapters/25-legal-contract-review.md
+  - 教育学习与知识管理:
+      - 教师备课工作流: chapters/26-teacher-lesson-prep.md
+      - 学生学习工作流: chapters/27-student-learning.md
+      - 个人知识整理工作流: chapters/28-personal-knowledge.md
+      - 个人复盘工作流: chapters/29-personal-review.md
+      - 任务管理工作流: chapters/30-personal-task-management.md
   - 工会宣传:
       - 活动宣传故事工作流: chapters/03-union-activity.md
   - Prompt 工程:
@@ -108,4 +114,5 @@ nav:
       - 第三阶段批次C审查: guide/stage-3-batch-c-review.md
       - 第三阶段批次D审查: guide/stage-3-batch-d-review.md
       - 第三阶段批次E审查: guide/stage-3-batch-e-review.md
+      - 第三阶段批次F审查: guide/stage-3-batch-f-review.md
       - 项目进度: guide/project-progress.md
