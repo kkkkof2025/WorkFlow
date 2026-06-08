@@ -2,28 +2,26 @@
 
 ## 当前状态
 
-- **当前阶段**：第三阶段正式内容生产
-- **当前批次**：批次 E（职能支持类）
-- **当前任务**：生成工作流 21-25
+- **当前阶段**：最终全书复核阶段
+- **当前批次**：批次 A-F 全部完成（30 个工作流）
+- **当前任务**：最终复核 + 参赛提交准备
 - **是否可继续**：是
-- **是否需要新会话**：建议新会话开始，避免上下文积累过多
 
 ---
 
-## 立即任务（批次 E）
+## 已完成任务（批次 E）
 
-- [ ] 生成 docs/chapters/21-hr-recruitment.md
-- [ ] 生成 docs/chapters/22-sales-follow-up.md
-- [ ] 生成 docs/chapters/23-customer-service.md
-- [ ] 生成 docs/chapters/24-finance-reimbursement.md
-- [ ] 生成 docs/chapters/25-legal-contract-review.md
-- [ ] 新增 docs/guide/stage-3-batch-e-review.md
-- [ ] 更新 mkdocs.yml（新增"职能支持"导航节）
-- [ ] 更新 docs/chapters/00-workflow-map.md
-- [ ] 更新 data/workflows.yaml
-- [ ] 更新 TODO.md
-- [ ] 运行 `py -3 -m mkdocs build --strict`
-- [ ] 提交并 push
+- [x] 生成 docs/chapters/21-hr-recruitment.md ✅
+- [x] 生成 docs/chapters/22-sales-follow-up.md ✅
+- [x] 生成 docs/chapters/23-customer-service.md ✅
+- [x] 生成 docs/chapters/24-finance-reimbursement.md ✅
+- [x] 生成 docs/chapters/25-legal-contract-review.md ✅
+- [x] 新增 docs/guide/stage-3-batch-e-review.md ✅
+- [x] 更新 mkdocs.yml（新增"职能支持"导航节）✅
+- [x] 更新 docs/chapters/00-workflow-map.md ✅
+- [x] 更新 data/workflows.yaml ✅
+- [x] 更新 TODO.md ✅
+- [x] 运行 `py -3 -m mkdocs build --strict` ✅
 
 ---
 
