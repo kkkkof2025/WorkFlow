@@ -68,28 +68,23 @@
 - docs/chapters/20-comment-opinion-analysis.md ✅
 - docs/guide/stage-3-batch-d-review.md ✅
 
+### 批次 E（职能支持类）
+- docs/chapters/21-hr-recruitment.md ✅
+- docs/chapters/22-sales-follow-up.md ✅
+- docs/chapters/23-customer-service.md ✅
+- docs/chapters/24-finance-reimbursement.md ✅
+- docs/chapters/25-legal-contract-review.md ✅
+- docs/guide/stage-3-batch-e-review.md ✅
+
 ---
 
 ## 当前状态
 
 - **当前阶段**：第三阶段正式内容生产
-- **当前批次**：批次 E（职能支持类）
-- **批次 E 状态**：❌ 未开始（5 个章节文件均不存在）
-- **已完成章节数**：20 个工作流章节（01-20）+ 3 个黄金样章
-- **待完成章节数**：10 个（21-30）
-
----
-
-## 批次 E 详情（未开始）
-
-| 文件 | 状态 | 招牌节点 | 特殊约束 |
-|------|------|---------|---------|
-| docs/chapters/21-hr-recruitment.md | ❌ 未创建 | 简历筛选标准专家 | 禁止基于年龄/性别/婚育/地域/民族筛选 |
-| docs/chapters/22-sales-follow-up.md | ❌ 未创建 | 异议处理专家 | 不得夸大承诺、虚假稀缺 |
-| docs/chapters/23-customer-service.md | ❌ 未创建 | 用户情绪识别专家 | 不得推责、冷漠、机械套话 |
-| docs/chapters/24-finance-reimbursement.md | ❌ 未创建 | 异常票据识别专家 | 不确定项标注"需人工核实" |
-| docs/chapters/25-legal-contract-review.md | ❌ 未创建 | 风险条款标记专家 | 必须声明"非法律意见，仅作初步辅助" |
-| docs/guide/stage-3-batch-e-review.md | ❌ 未创建 | — | — |
+- **当前批次**：批次 F（教育学习与个人知识管理类，待规划）
+- **批次 E 状态**：✅ 已完成，构建通过
+- **已完成章节数**：25 个工作流章节（01-25）+ 3 个黄金样章
+- **待完成章节数**：5 个（26-30）
 
 ---
 
@@ -115,9 +110,9 @@
 8. docs/guide/workflow-card-template.md
 9. docs/guide/style-engineering.md
 10. docs/guide/quality-standard.md
-11. docs/guide/stage-3-batch-d-review.md（最新完成的 review）
+11. docs/guide/stage-3-batch-e-review.md（最新完成的 review）
 
-**第一条任务**：开始生成批次 E，从 `docs/chapters/21-hr-recruitment.md` 开始。
+**第一条任务**：规划并开始生成批次 F（26-30），先确认 5 个工作流的主题后再开始生产。
 
 ---
 
